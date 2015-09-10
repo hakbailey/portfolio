@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+  	<div class="col-sm-2 col-md-2 legend">
+  		<h5>Sponsoring Departments:</h5>
+  	</div>
+    <div class="col-sm-10 col-md-8 viz"></div>
+    <div class="col-sm-12 col-md-2 info">What info do we want to include here on hover/click?</div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+	{{ super() }}
+	<script>
+      var data = '{{ data|tojson|safe }}';
+    </script>
+	<script src="static/main.js"></script>
+
+{% endblock %}
+
+{% block body %}
+  {{ super() }}
+{% endblock %}

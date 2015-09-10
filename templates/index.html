@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% from "macros.html" import nav_link with context %}
+
+<html>
+  <head>
+    {% block head %}
+      <meta charset="utf-8">
+      <title>Portfolio of DLAD Projects</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="static/main.css"  media="screen" >
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block body %}
+      <div class="container">
+        <nav role="navigation" class="navbar navbar-default">
+          <div class="navbar-header">
+              <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand">DLAD Project Portfolio</a>
+          </div>
+
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                  {{ nav_link('index', 'Home') }}
+                  {{ nav_link('timeline', 'Timeline') }}
+                  {{ nav_link('treemap', 'Treemap') }}
+              </ul>
+          </div>
+        </nav>
+
+        {% block content %}
+          <div class="row">
+            <div class="col-sm-12 col-md-9 viz">Decide on home page content</div>
+            <div class="col-sm-12 col-md-3 info"></div>
+          </div>
+        {% endblock %}
+      </div>
+
+      {% block scripts %}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- // <script src="static/main.js"></script> -->
+      {% endblock %}
+
+    {% endblock %}
+  </body>
+
+</html>

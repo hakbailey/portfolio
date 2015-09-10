@@ -1,0 +1,270 @@
+{
+    "name": "DLAD", 
+    "children": [
+        {
+            "name": "SCOAP3 TopicHub", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/rrodgers", 
+                    "role": "dev", 
+                    "name": "Richard"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/jprevost", 
+                    "role": "dev", 
+                    "name": "Jeremy"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/sthomas", 
+                    "role": "owner", 
+                    "name": "Sean"
+                }
+            ], 
+            "url": "http://waffle.io/MITLibraries/topichub", 
+            "repo": "https://github.com/MITLibraries/topichub", 
+            "start": "2015-03-01", 
+            "sponsor": "Scholarly Publishing", 
+            "complete": null, 
+            "target": "2015-08-30", 
+            "inception": "2015-01-01", 
+            "categories": [
+                "Open Access"
+            ], 
+            "size": 3
+        }, 
+        {
+            "name": "Deployment Infrastructure", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/mjbernha", 
+                    "role": "dev", 
+                    "name": "Matt"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/mgraves", 
+                    "role": "dev", 
+                    "name": "Mike"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/rrodgers", 
+                    "role": "owner", 
+                    "name": "Richard"
+                }
+            ], 
+            "url": "https://github.mit.edu/mitLibraries/dspace_deployment", 
+            "repo": "https://github.mit.edu/mitLibraries/dspace_deployment", 
+            "start": "2015-08-20", 
+            "sponsor": "DLAD", 
+            "complete": null, 
+            "target": "2015-10-30", 
+            "inception": "2015-08-01", 
+            "categories": [
+                "DSpace", 
+                "IR"
+            ], 
+            "size": 4
+        }, 
+        {
+            "name": "E-book Access", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/hbailey", 
+                    "role": "dev", 
+                    "name": "Helen"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/lorriem", 
+                    "role": "owner", 
+                    "name": "Lorrie"
+                }
+            ], 
+            "url": "https://github.com/MITLibraries/ebooks", 
+            "repo": "https://github.com/MITLibraries/ebooks", 
+            "start": "2015-03-01", 
+            "sponsor": "Collections", 
+            "complete": null, 
+            "target": "2015-08-30", 
+            "inception": "2015-01-01", 
+            "categories": [
+                "ILS"
+            ], 
+            "size": 2
+        }, 
+        {
+            "name": "Organizational Visualization Tool", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/hbailey", 
+                    "role": "dev", 
+                    "name": "Helen"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/cbourg", 
+                    "role": "owner", 
+                    "name": "Chris"
+                }
+            ], 
+            "url": "http://waffle.io/MITLibraries/lumos", 
+            "repo": "https://github.com/MITLibraries/lumos", 
+            "start": "2015-04-01", 
+            "sponsor": "Director's Office", 
+            "complete": null, 
+            "target": "2015-08-30", 
+            "inception": "2015-03-01", 
+            "categories": [
+                "Visualization"
+            ], 
+            "size": 2
+        }, 
+        {
+            "name": "GIS Workflow Infrastructure", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/mgraves", 
+                    "role": "dev", 
+                    "name": "Mike"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/dsheehan", 
+                    "role": "owner", 
+                    "name": "Daniel"
+                }
+            ], 
+            "url": "http://waffle.io/MITLibraries/kepler", 
+            "repo": "https://github.com/MITLibraries/kepler", 
+            "start": "2015-04-01", 
+            "sponsor": "GIS Program", 
+            "complete": null, 
+            "target": "2015-08-30", 
+            "inception": "2015-03-01", 
+            "categories": [
+                "GIS"
+            ], 
+            "size": 4
+        }, 
+        {
+            "name": "OA Statistics Infrastructure", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/mjbernha", 
+                    "role": "dev", 
+                    "name": "Matt"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/mgraves", 
+                    "role": "dev", 
+                    "name": "Mike"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/efinnie", 
+                    "role": "owner", 
+                    "name": "Ellen"
+                }
+            ], 
+            "url": "https://github.com/MITLibraries/oastats-backend", 
+            "repo": "https://github.com/MITLibraries/oastats-backend", 
+            "start": "2015-08-20", 
+            "sponsor": "Scholarly Publishing", 
+            "complete": null, 
+            "target": "2015-10-30", 
+            "inception": "2015-08-15", 
+            "categories": [
+                "Open Access"
+            ], 
+            "size": 2
+        }, 
+        {
+            "name": "DSpace Identity Lookup", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/mjbernha", 
+                    "role": "dev", 
+                    "name": "Matt"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/szendeh", 
+                    "role": "dev", 
+                    "name": "Solh"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/sthomas", 
+                    "role": "owner", 
+                    "name": "Sean"
+                }
+            ], 
+            "url": "https://github.mit.edu/mitlibraries/author-lookup", 
+            "repo": "https://github.mit.edu/mitlibraries/author-lookup", 
+            "start": "2015-05-20", 
+            "sponsor": "Scholarly Publishing", 
+            "complete": null, 
+            "target": "2015-10-30", 
+            "inception": "2015-05-01", 
+            "categories": [
+                "Open Access"
+            ], 
+            "size": 3
+        }, 
+        {
+            "name": "Doc Services Request Management", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/mjbernha", 
+                    "role": "dev", 
+                    "name": "Matt"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/feiden", 
+                    "role": "pm", 
+                    "name": "Melissa"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/cquirion", 
+                    "role": "owner", 
+                    "name": "Christine"
+                }
+            ], 
+            "url": "https://https://basecamp.com/2612667/projects/5842953", 
+            "repo": "https://https://basecamp.com/2612667/projects/5842953", 
+            "start": "2015-03-20", 
+            "sponsor": "IDLA", 
+            "complete": null, 
+            "target": "2015-10-30", 
+            "inception": "2015-02-26", 
+            "categories": [
+                "Doc Services"
+            ], 
+            "size": 3
+        }, 
+        {
+            "name": "DSpace ORCID Integration", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/rrodgers", 
+                    "role": "dev", 
+                    "name": "Richard"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/bturner", 
+                    "role": "pm", 
+                    "name": "Beverly"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/sthomas", 
+                    "role": "owner", 
+                    "name": "Sean"
+                }
+            ], 
+            "url": "https://https://basecamp.com/2612667/projects/5842953", 
+            "repo": "https://https://basecamp.com/2612667/projects/5842953", 
+            "start": "2015-08-20", 
+            "sponsor": "Repository Services", 
+            "complete": null, 
+            "target": "2016-03-30", 
+            "inception": "2015-02-26", 
+            "categories": [
+                "DSpace"
+            ], 
+            "size": 3
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+/* custom css */
+
+/*body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+/*  width: 960px;*/
+}
+
+/*.container {
+	padding: 20px;
+}*/*/
+
+.navbar-outer {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chart {
+  display: block;
+  margin: auto;
+/*  margin-top: 40px;*/
+}
+
+.cell {
+  background-color: white;
+}
+
+text {
+/*  font-size: 1em;*/
+  pointer-events: none;
+}
+
+/*rect {
+  fill: none;
+  border: none;
+}
+
+
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}*/
