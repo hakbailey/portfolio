@@ -73,7 +73,12 @@ d3.json("static/data.json", function(data) {
 		.attr("class", "cell")
 		.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-	cell.append("svg:rect")
+	cell.append("a")
+		.attr("xlink:href", function(d) {
+			return d.url;
+		})
+		.attr("show", "new")
+		.append("svg:rect")
 		.attr("width", function(d) { return d.dx - 2; })
 		.attr("height", function(d) { return d.dy - 2; })
 		.style("fill", function(d) { 
