@@ -27,6 +27,19 @@
   background-color: white;
 }
 
+.legend {
+  position: absolute;
+  bottom: 0;
+/*  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  padding: 5px;*/
+}
+
+h4 {
+  margin-top: 0;
+}
+
 text {
 /*  font-size: 1em;*/
   pointer-events: none;

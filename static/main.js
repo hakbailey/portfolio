@@ -29,27 +29,30 @@ var chart = d3.select(".viz")
 	.append("svg:g");
 	// .attr("transform", "translate(.5,.5)");
 
-var legend = d3.select(".legend")
+var project_info = d3.select(".info")
+	.append("div")
+	.attr("class", "project-info")
+	.style("width", cw/4 + "px")
+	.style("height", h + "px");
+
+var legend = d3.select(".info")
 	.append("div")
 	.attr("class", "legend")
-	.style("width", cw/6 + "px")
-	.style("height", h + "px")
-	.append("svg:svg")
-	.attr("width", cw/6)
+	.style("width", cw/4 + "px")
+	.style("height", function() {
+		return (20*sponsors.length + 35) + "px";
+	})
+
+legend.append("h5")
+	.text("Sponsoring Departments:");
+
+legend.append("svg:svg")
+	.attr("width", cw/4)
 	.attr("height", function() {
 		return 20*sponsors.length;
-	})
-	.append("svg:g");
+	});
 
-var info = d3.select(".info")
-	.append("div")
-	.attr("class", "info")
-	.style("width", cw/6 + "px")
-	.style("height", h + "px")
-	.append("svg:svg")
-	.attr("width", cw/6)
-	.attr("height", h)
-	.append("svg:g");
+
 
 function get_sponsors(data) {
 	d = JSON.parse(data);
@@ -90,9 +93,33 @@ d3.json("static/data.json", function(data) {
 		})
 		.style("stroke", "white")
 		.style("stroke-width", 1)
-		.on("mouseover", function() {
+		.on("mouseover", function(d) {
 			d3.select(this)
 				.style("stroke", "black");
+
+			d3.selectAll(".info-text").remove();
+
+			var info_text = project_info.append("div")
+				.attr("class", "info-text")
+
+			info_text.append("h4")
+				.text(function() {
+					return d.name;
+				});
+
+			info_text.append("h5")
+				.text("Contributors:");
+			
+			var cList = info_text.append("ul")
+				.attr("class", "contributors");
+
+			cList.selectAll("li")
+				.data(d.contributors)
+				.enter()
+				.append("li")
+				.text(function(d) {
+					return d.name + " (" + d.role + ")";
+				});
 		})
 		.on("mouseout", function() {
 			d3.select(this)
@@ -106,13 +133,14 @@ d3.json("static/data.json", function(data) {
 		.attr("text-anchor", "middle")
 		.text(function(d) { return d.name; });
 
-	var legend_item = legend.selectAll("g")
+	var legend_item = legend.select("svg")
+		.selectAll("g")
 		.data(sponsors)
 		.enter()
 		.append("svg:g")
 		.attr("class", "legend_item")
 		.attr("transform", function(d, i) {
-			return "translate(" + 10 + "," + 20*i + ")";
+			return "translate(" + 20 + "," + 20*i + ")";
 		});
 
 	legend_item.append("svg:rect")
@@ -125,8 +153,13 @@ d3.json("static/data.json", function(data) {
 	legend_item.append("svg:text")
 		.attr("x", 20)
 		.attr("y", 15)
-		.attr("text-anchor", "left")
-		.text(function(d) { return d; })
-		.style("font-size", "0.8em");
+		.attr("class", "small")
+		// .attr("text-anchor", "left")
+		.text(function(d) { return d; });
+	
+	var info_text = project_info.append("div")
+		.attr("class", "info-text")
+		.append("p")
+			.text("Hover over a project for more information")
 
 	});
