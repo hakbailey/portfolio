@@ -1,4 +1,4 @@
 .DS_*
 data/
 venv/
-.pyc
+*.pyc
