@@ -63,7 +63,11 @@ function get_sponsors(data) {
 	d = JSON.parse(data);
 	RESULTS = []
 	for (i in d.children) {
-		if (RESULTS.indexOf(d.children[i].sponsor) == -1) {
+		if ('children' in d.children[i]) {
+			if (RESULTS.indexOf(d.children[i].name) == -1) {
+				RESULTS.push(d.children[i].name);
+			}
+		} else if (RESULTS.indexOf(d.children[i].sponsor) == -1) {
 			RESULTS.push(d.children[i].sponsor);
 		}
 	}
