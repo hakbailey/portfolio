@@ -100,6 +100,37 @@
             ]
         }, 
         {
+            "name": "Handbag", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/rrodgers", 
+                    "role": "dev", 
+                    "name": "Richard"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/hbailey", 
+                    "role": "dev", 
+                    "name": "Helen"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/nancymcg", 
+                    "role": "owner", 
+                    "name": "Nancy"
+                }
+            ], 
+            "url": "https://github.com/MITLibraries/handbag", 
+            "repo": "https://github.com/MITLibraries/handbag", 
+            "start": "2015-03-19", 
+            "sponsor": "Curation and Preservation Services", 
+            "complete": null, 
+            "target": "2015-08-31", 
+            "inception": "2015-01-21", 
+            "categories": [
+                "Digital Preservation"
+            ], 
+            "size": 2
+        }, 
+        {
             "name": "DSpace ORCID Integration", 
             "contributors": [
                 {

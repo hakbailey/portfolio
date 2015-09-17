@@ -264,6 +264,37 @@
      "start": "2015-08-20",
      "target": "2016-03-30",
      "complete": null
+   },
+   {
+      "name": "Handbag",
+      "url": "https://github.com/MITLibraries/handbag",
+      "repo": "https://github.com/MITLibraries/handbag",
+      "size": 2,
+      "sponsor": "Curation and Preservation Services",
+      "categories": [
+        "Digital Preservation"
+      ],
+      "contributors": [
+        {
+          "name": "Richard",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        },
+        {
+          "name": "Helen",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Nancy",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/nancymcg"
+        }
+      ],
+     "inception": "2015-01-21",
+     "start": "2015-03-19",
+     "target": "2015-08-31",
+     "complete": null
    }
   ]
 }

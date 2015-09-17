@@ -55,7 +55,10 @@ legend.append("svg:svg")
 	});
 
 function get_date(date) {
-	new_date = new Date(date);
+	var y = date.slice(0, 4);
+	var m = parseInt(date.slice(5, 7)) - 1;
+	var d = parseInt(date.slice(8,10));
+	new_date = new Date(y, m, d);
 	return new_date;
 }
 
@@ -72,6 +75,31 @@ function get_sponsors(data) {
 		}
 	}
 	return RESULTS.sort();
+}
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        x = text.attr("x"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
 }
 
 d3.json("static/data.json", function(data) {
@@ -101,10 +129,12 @@ d3.json("static/data.json", function(data) {
 			}
 		})
 		.style("stroke", function(d) {
-			if (get_date(d.target) < today_date) {
-				return "red";
-			} else {
-				return "white";
+			if (!d.children) {
+				if (get_date(d.target) < today_date) {
+					return "red";
+				} else {
+					return "white";
+				}
 			}
 		})
 		.style("stroke-width", 1)
@@ -156,51 +186,25 @@ d3.json("static/data.json", function(data) {
 						return "white";
 					}
 				});
-		});
+		})
 
-	cell.append("svg:text")
-		.attr("x", function(d) { return d.dx / 2; })
-		.attr("y", function(d) { return d.dy / 2; })
-		.attr("dy", ".35em")
-		.attr("text-anchor", "middle")
-		.text(function(d) { 
+	cell.append("text")
+		.text(function(d) {
 			if (! d.children) {
 				return d.name;
 			}
-	 	});
-		// .style("fill", function(d) {
-		// 	if (! d.children) {
-		// 		var target_date = get_date(d.target);
-		// 		if (target_date < today_date) {
-		// 			return "red";
-		// 		}
-		// 	}
-
-		// });
-		// .style("stroke", function(d) {
-		// 	if (! d.children) {
-		// 		var target_date = get_date(d.target);
-		// 		if (target_date < today_date) {
-		// 			return "white";
-		// 		}
-		// 	}
-		// })
-		// .style("stroke-width", function(d) {
-		// 	if (! d.children) {
-		// 		var target_date = get_date(d.target);
-		// 		if (target_date < today_date) {
-		// 			return 0.5;
-		// 		}
-		// 	}
-		// })
-		// .style("font-size", function(d) {
-		// 	if (! d.children) {
-		// 		var target_date = get_date(d.target);
-		// 		if (target_date < today_date) {
-		// 			return "1.5em";
-		// 		}
-		// 	}
-		// });
+	 	})
+	 	.each(function(d){
+	 		var w = d.dx;
+	 		var h = d.dy;
+        	d3plus.textwrap()
+        		.container(d3.select(this))
+        		.width(w)
+        		.height(h)
+        		.align('middle')
+        		.valign('middle')
+        		.draw();
+    	});
 
 	var legend_item = legend.select("svg")
 		.selectAll("g")
