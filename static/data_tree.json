@@ -5,37 +5,6 @@
             "name": "Scholarly Publishing", 
             "children": [
                 {
-                    "name": "DSpace Identity Lookup", 
-                    "contributors": [
-                        {
-                            "url": "http://m.mit.edu/apis/people/mjbernha", 
-                            "role": "dev", 
-                            "name": "Matt"
-                        }, 
-                        {
-                            "url": "http://m.mit.edu/apis/people/szendeh", 
-                            "role": "dev", 
-                            "name": "Solh"
-                        }, 
-                        {
-                            "url": "http://m.mit.edu/apis/people/sthomas", 
-                            "role": "owner", 
-                            "name": "Sean"
-                        }
-                    ], 
-                    "url": "https://github.mit.edu/mitlibraries/author-lookup", 
-                    "repo": "https://github.mit.edu/mitlibraries/author-lookup", 
-                    "start": "2015-05-20", 
-                    "sponsor": "Scholarly Publishing", 
-                    "complete": null, 
-                    "target": "2015-10-30", 
-                    "inception": "2015-05-01", 
-                    "categories": [
-                        "Open Access"
-                    ], 
-                    "size": 3
-                }, 
-                {
                     "name": "OA Statistics Infrastructure", 
                     "contributors": [
                         {
@@ -65,6 +34,37 @@
                         "Open Access"
                     ], 
                     "size": 2
+                }, 
+                {
+                    "name": "DSpace Identity Lookup", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/mjbernha", 
+                            "role": "dev", 
+                            "name": "Matt"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/szendeh", 
+                            "role": "dev", 
+                            "name": "Solh"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/sthomas", 
+                            "role": "owner", 
+                            "name": "Sean"
+                        }
+                    ], 
+                    "url": "https://github.mit.edu/mitlibraries/author-lookup", 
+                    "repo": "https://github.mit.edu/mitlibraries/author-lookup", 
+                    "start": "2015-05-20", 
+                    "sponsor": "Scholarly Publishing", 
+                    "complete": null, 
+                    "target": "2015-10-30", 
+                    "inception": "2015-05-01", 
+                    "categories": [
+                        "Open Access"
+                    ], 
+                    "size": 3
                 }, 
                 {
                     "name": "SCOAP3 TopicHub", 
@@ -100,37 +100,6 @@
             ]
         }, 
         {
-            "name": "Handbag", 
-            "contributors": [
-                {
-                    "url": "http://m.mit.edu/apis/people/rrodgers", 
-                    "role": "dev", 
-                    "name": "Richard"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/hbailey", 
-                    "role": "dev", 
-                    "name": "Helen"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/nancymcg", 
-                    "role": "owner", 
-                    "name": "Nancy"
-                }
-            ], 
-            "url": "https://github.com/MITLibraries/handbag", 
-            "repo": "https://github.com/MITLibraries/handbag", 
-            "start": "2015-03-19", 
-            "sponsor": "Curation and Preservation Services", 
-            "complete": null, 
-            "target": "2015-08-31", 
-            "inception": "2015-01-21", 
-            "categories": [
-                "Digital Preservation"
-            ], 
-            "size": 2
-        }, 
-        {
             "name": "DSpace ORCID Integration", 
             "contributors": [
                 {
@@ -162,7 +131,7 @@
             "size": 3
         }, 
         {
-            "name": "Doc Services Request Management", 
+            "name": "Deployment Infrastructure", 
             "contributors": [
                 {
                     "url": "http://m.mit.edu/apis/people/mjbernha", 
@@ -170,27 +139,28 @@
                     "name": "Matt"
                 }, 
                 {
-                    "url": "http://m.mit.edu/apis/people/feiden", 
-                    "role": "pm", 
-                    "name": "Melissa"
+                    "url": "http://m.mit.edu/apis/people/mgraves", 
+                    "role": "dev", 
+                    "name": "Mike"
                 }, 
                 {
-                    "url": "http://m.mit.edu/apis/people/cquirion", 
+                    "url": "http://m.mit.edu/apis/people/rrodgers", 
                     "role": "owner", 
-                    "name": "Christine"
+                    "name": "Richard"
                 }
             ], 
-            "url": "https://basecamp.com/2612667/projects/5842953", 
-            "repo": "https://basecamp.com/2612667/projects/5842953", 
-            "start": "2015-03-20", 
-            "sponsor": "IDLA", 
+            "url": "https://github.mit.edu/mitLibraries/dspace_deployment", 
+            "repo": "https://github.mit.edu/mitLibraries/dspace_deployment", 
+            "start": "2015-08-20", 
+            "sponsor": "DLAD", 
             "complete": null, 
             "target": "2015-10-30", 
-            "inception": "2015-02-26", 
+            "inception": "2015-08-01", 
             "categories": [
-                "Doc Services"
+                "DSpace", 
+                "IR"
             ], 
-            "size": 3
+            "size": 4
         }, 
         {
             "name": "GIS Workflow Infrastructure", 
@@ -245,6 +215,68 @@
             "size": 2
         }, 
         {
+            "name": "Doc Services Request Management", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/mjbernha", 
+                    "role": "dev", 
+                    "name": "Matt"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/feiden", 
+                    "role": "pm", 
+                    "name": "Melissa"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/cquirion", 
+                    "role": "owner", 
+                    "name": "Christine"
+                }
+            ], 
+            "url": "https://basecamp.com/2612667/projects/5842953", 
+            "repo": "https://basecamp.com/2612667/projects/5842953", 
+            "start": "2015-03-20", 
+            "sponsor": "IDLA", 
+            "complete": null, 
+            "target": "2015-10-30", 
+            "inception": "2015-02-26", 
+            "categories": [
+                "Doc Services"
+            ], 
+            "size": 3
+        }, 
+        {
+            "name": "Handbag", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/rrodgers", 
+                    "role": "dev", 
+                    "name": "Richard"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/hbailey", 
+                    "role": "dev", 
+                    "name": "Helen"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/nancymcg", 
+                    "role": "owner", 
+                    "name": "Nancy"
+                }
+            ], 
+            "url": "https://github.com/MITLibraries/handbag", 
+            "repo": "https://github.com/MITLibraries/handbag", 
+            "start": "2015-03-19", 
+            "sponsor": "Curation and Preservation Services", 
+            "complete": null, 
+            "target": "2015-08-31", 
+            "inception": "2015-01-21", 
+            "categories": [
+                "Digital Preservation"
+            ], 
+            "size": 2
+        }, 
+        {
             "name": "E-book Access", 
             "contributors": [
                 {
@@ -269,38 +301,6 @@
                 "ILS"
             ], 
             "size": 2
-        }, 
-        {
-            "name": "Deployment Infrastructure", 
-            "contributors": [
-                {
-                    "url": "http://m.mit.edu/apis/people/mjbernha", 
-                    "role": "dev", 
-                    "name": "Matt"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/mgraves", 
-                    "role": "dev", 
-                    "name": "Mike"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/rrodgers", 
-                    "role": "owner", 
-                    "name": "Richard"
-                }
-            ], 
-            "url": "https://github.mit.edu/mitLibraries/dspace_deployment", 
-            "repo": "https://github.mit.edu/mitLibraries/dspace_deployment", 
-            "start": "2015-08-20", 
-            "sponsor": "DLAD", 
-            "complete": null, 
-            "target": "2015-10-30", 
-            "inception": "2015-08-01", 
-            "categories": [
-                "DSpace", 
-                "IR"
-            ], 
-            "size": 4
         }
     ]
 }

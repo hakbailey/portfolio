@@ -6,13 +6,20 @@
 
 {% block content %}
   <div class="row">
-    <div class="col-sm-12 col-md-9 viz">Content goes here.</div>
+    <div class="col-sm-12 col-md-9 viz"></div>
     <div class="col-sm-12 col-md-3 info"></div>
   </div>
 {% endblock %}
 
 {% block scripts %}
 	{{ super() }}
+	<script>
+      var data = '{{ data|tojson|safe }}';
+    </script>
+	<script>
+      var dates = '{{ dates|tojson|safe }}';
+    </script>
+	<script src="static/timeline.js"></script>
 {% endblock %}
 
 {% block body %}

@@ -1,5 +1,3 @@
-// custom javascript
-
 var sponsors = get_sponsors(data);
 var today_date = new Date();
 
@@ -12,6 +10,9 @@ var w = $('.viz').width(),
 		.range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)','rgb(188,128,189)']),
 	root,
 	node;
+
+var colors = set_colors();
+console.log(colors);
 
 var treemap = d3.layout.treemap()
 	.round(false)
@@ -77,32 +78,15 @@ function get_sponsors(data) {
 	return RESULTS.sort();
 }
 
-function wrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr("y"),
-        x = text.attr("x"),
-        dy = parseFloat(text.attr("dy")),
-        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-      }
-    }
-  });
+function set_colors() {
+	RESULTS = {}
+	for (s in sponsors) {
+		RESULTS[sponsors[s]] = color(s);
+	}
+	return RESULTS;
 }
 
-d3.json("static/data.json", function(data) {
+d3.json("static/data_tree.json", function(data) {
 	node = root = data;
 
 	var nodes = treemap.nodes(root);
@@ -125,7 +109,7 @@ d3.json("static/data.json", function(data) {
 			if (d.children) {
 				return "white";
 			} else {
-				return color(d.sponsor); 
+				return colors[d.sponsor]; 
 			}
 		})
 		.style("stroke", function(d) {
@@ -220,7 +204,7 @@ d3.json("static/data.json", function(data) {
 		.attr("width", 15)
 		.attr("height", 15)
 		.style("fill", function(d) {
-			return color(d);
+			return colors[d];
 		});
 
 	legend_item.append("svg:text")
