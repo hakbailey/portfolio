@@ -7,7 +7,7 @@ var w = $('.viz').width(),
 	y = d3.scale.linear().range([0, h]),
 	rw = $('.info').width(),
 	color = d3.scale.ordinal()
-		.range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)','rgb(188,128,189)']),
+		.range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)','rgb(188,128,189)','rgb(204,235,197)','rgb(255,237,111)']),
 	root,
 	node;
 
@@ -27,10 +27,10 @@ var chart = d3.select(".viz")
 	.style("width", w + "px")
 	.style("height", h + "px")
 	.append("svg:svg")
-	.attr("width", w)
-	.attr("height", h)
-	.append("svg:g");
-	// .attr("transform", "translate(.5,.5)");
+	.attr("width", w - 2)
+	.attr("height", h - 2)
+	.append("svg:g")
+	.attr("transform", "translate(1,1)");
 
 var project_info = d3.select(".info")
 	.append("div")
@@ -103,8 +103,8 @@ d3.json("static/data_tree.json", function(data) {
 		})
 		.attr("show", "new")
 		.append("svg:rect")
-		.attr("width", function(d) { return d.dx - 2; })
-		.attr("height", function(d) { return d.dy - 2; })
+		.attr("width", function(d) { return d.dx - 4; })
+		.attr("height", function(d) { return d.dy - 4; })
 		.style("fill", function(d) { 
 			if (d.children) {
 				return "white";
@@ -121,45 +121,47 @@ d3.json("static/data_tree.json", function(data) {
 				}
 			}
 		})
-		.style("stroke-width", 1)
+		.style("stroke-width", 2)
 		.on("mouseover", function(d) {
-			d3.select(this)
-				.style("stroke", "black");
+			if (!d.children) {
+				d3.select(this)
+					.style("stroke", "black");
 
-			d3.selectAll(".info-text").remove();
+				d3.selectAll(".info-text").remove();
 
-			var info_text = project_info.append("div")
-				.attr("class", "info-text")
+				var info_text = project_info.append("div")
+					.attr("class", "info-text")
 
-			info_text.append("h4")
-				.text(function() {
-					return d.name;
-				});
+				info_text.append("h4")
+					.text(function() {
+						return d.name;
+					});
 
-			info_text.append("h5")
-				.text("Contributors:");
-			
-			var cList = info_text.append("ul")
-				.attr("class", "contributors");
+				info_text.append("h5")
+					.text("Contributors:");
+				
+				var cList = info_text.append("ul")
+					.attr("class", "contributors");
 
-			cList.selectAll("li")
-				.data(d.contributors)
-				.enter()
-				.append("li")
-				.text(function(d) {
-					return d.name + " (" + d.role + ")";
-				});
+				cList.selectAll("li")
+					.data(d.contributors)
+					.enter()
+					.append("li")
+					.text(function(d) {
+						return d.name + " (" + d.role + ")";
+					});
 
-			info_text.append("p")
-				.attr("class", "text-danger bg-danger")
-				.text(function() {
+				info_text.append("p")
+					.attr("class", "text-danger bg-danger")
+					.text(function() {
 
-					if (get_date(d.target) < today_date) {
-						s = "This project is past its target end date of "
-						date = moment(get_date(d.target)).format('MMMM Do, YYYY');
-						return s + date;
-					}
-				})
+						if (get_date(d.target) < today_date) {
+							s = "This project is past its target end date of "
+							date = moment(get_date(d.target)).format('MMMM Do, YYYY');
+							return s + date;
+						}
+					})
+				}
 		})
 		.on("mouseout", function() {
 			d3.select(this)
