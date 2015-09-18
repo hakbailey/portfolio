@@ -11,7 +11,7 @@ var color = d3.scale.ordinal()
 
 var colors = set_colors();
 
-var margin = {top: 20, right: 30, bottom: 30, left: 30},
+var margin = {top: 20, right: 30, bottom: 80, left: 30},
     width = document.getElementsByClassName('viz')[0].offsetWidth - 30 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     rw = document.getElementsByClassName('info')[0].offsetWidth;
@@ -34,7 +34,8 @@ var y = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .ticks(d3.time.months, 6)
+    .ticks(d3.time.months, 3)
+    .tickSize(4)
     .tickFormat(d3.time.format("%b %Y"))
     .orient("bottom");
 
@@ -165,7 +166,7 @@ d3.json("static/data_time.json", function(error, data) {
 
     var ruler = mover.append("line")
         .attr("x1", "0")
-        .attr("y1", height - margin.bottom + 10)
+        .attr("y1", height - margin.bottom + 50)
         .attr("x2", "0")
         .attr("y2", "0")
         .attr("stroke", "black")
@@ -181,7 +182,13 @@ d3.json("static/data_time.json", function(error, data) {
     svgContainer.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+        .call(xAxis)
+        .selectAll("text")
+        .attr("y", 0)
+        .attr("x", 9)
+        .attr("dy", ".35em")
+        .attr("transform", "rotate(90)")
+        .style("text-anchor", "start");
 
     var legend_item = legend.select("svg")
         .selectAll("g")
