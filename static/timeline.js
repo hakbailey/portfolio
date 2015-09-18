@@ -11,7 +11,7 @@ var color = d3.scale.ordinal()
 
 var colors = set_colors();
 
-var margin = {top: 20, right: 30, bottom: 80, left: 30},
+var margin = {top: 20, right: 30, bottom: 60, left: 30},
     width = document.getElementsByClassName('viz')[0].offsetWidth - 30 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     rw = document.getElementsByClassName('info')[0].offsetWidth;
@@ -148,7 +148,7 @@ d3.json("static/data_time.json", function(error, data) {
             }
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 1.8 + margin.top - ((height/dates.length * 1.3) - 12)/2;
+            return height/dates.length * i * 1.8 + margin.top - ((height/dates.length * 1.3) - 10)/2;
         })
         .attr("text-anchor", function(d, i) {
             if (midpoint - format.parse(d.start) > format.parse(d.target) - midpoint) {
