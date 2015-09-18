@@ -295,6 +295,63 @@
      "start": "2015-03-19",
      "target": "2015-08-31",
      "complete": null
+   },
+   {
+      "name": "Wordpress deploy infrastructure",
+      "url": "https://github.mit.edu/mitlibraries/wordpress_deployment",
+      "repo": "https://github.mit.edu/mitlibraries/wordpress_deployment",
+      "size": 2,
+      "sponsor": "User Experience",
+      "categories": [
+        "Communication"
+      ],
+      "contributors": [
+        {
+          "name": "Matt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Phillip",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/pbruk"
+        }
+      ],
+     "inception": "2014-11-05",
+     "start": "2014-11-25",
+     "target": "2015-10-31",
+     "complete": null
+   },
+   {
+      "name": "Wordpress platform development",
+      "url": "https://basecamp.com/2612667/projects/9123052",
+      "repo": "https://github.com/mitlibraries-ux/MITlibraries-parent",
+      "size": 5,
+      "sponsor": "User Experience",
+      "categories": [
+        "Communication"
+      ],
+      "contributors": [
+        {
+          "name": "Matt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Phillip",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/pbruk"
+        },
+        {
+          "name": "Darcy",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        }
+      ],
+     "inception": "2014-01-01",
+     "start": "2014-01-01",
+     "target": "2015-12-31",
+     "complete": null
    }
   ]
 }
