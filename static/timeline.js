@@ -147,7 +147,7 @@ d3.json("static/data_time.json", function(error, data) {
             }
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 1.8 + margin.top;
+            return height/dates.length * i * 1.8 + margin.top - ((height/dates.length * 1.3) - 12)/2;
         })
         .attr("text-anchor", function(d, i) {
             if (midpoint - format.parse(d.start) > format.parse(d.target) - midpoint) {

@@ -297,7 +297,7 @@
      "complete": null
    },
    {
-      "name": "Wordpress deploy infrastructure",
+      "name": "Wordpress Deploy Infrastructure",
       "url": "https://github.mit.edu/mitlibraries/wordpress_deployment",
       "repo": "https://github.mit.edu/mitlibraries/wordpress_deployment",
       "size": 2,
@@ -323,7 +323,7 @@
      "complete": null
    },
    {
-      "name": "Wordpress platform development",
+      "name": "Wordpress Platform Development",
       "url": "https://basecamp.com/2612667/projects/9123052",
       "repo": "https://github.com/mitlibraries-ux/MITlibraries-parent",
       "size": 5,
@@ -351,6 +351,59 @@
      "inception": "2014-01-01",
      "start": "2014-01-01",
      "target": "2015-12-31",
+     "complete": null
+   },
+   {
+      "name": "DLAD Portfolio Visualization",
+      "url": "http://dlad-portfolio.herokuapp.com/",
+      "repo": "https://github.com/MITLibraries/portfolio",
+      "size": 2,
+      "sponsor": "DLAD",
+      "categories": [
+        "Visualization"
+      ],
+      "contributors": [
+        {
+          "name": "Helen",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Christine",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/cquirion"
+        }
+      ],
+     "inception": "2015-09-01",
+     "start": "2015-09-08",
+     "target": "2015-09-30",
+     "complete": null
+   },
+   {
+      "name": "DCR Data Set Backend Update",
+      "url": null,
+      "repo": null,
+      "size": 2,
+      "sponsor": "Curation and Preservation Services",
+      "categories": [
+        "Visualization",
+        "Digital Preservation"
+      ],
+      "contributors": [
+        {
+          "name": "Helen",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Nance",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/nancymcg"
+        }
+      ],
+     "inception": "2014-10-01",
+     "start": "2015-08-15",
+     "target": "2015-11-30",
      "complete": null
    }
   ]

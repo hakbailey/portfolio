@@ -2,7 +2,7 @@
     "name": "DLAD", 
     "projects": [
         {
-            "name": "Wordpress platform development", 
+            "name": "Wordpress Platform Development", 
             "contributors": [
                 {
                     "url": "http://m.mit.edu/apis/people/mjbernha", 
@@ -33,7 +33,7 @@
             "size": 5
         }, 
         {
-            "name": "Wordpress deploy infrastructure", 
+            "name": "Wordpress Deploy Infrastructure", 
             "contributors": [
                 {
                     "url": "http://m.mit.edu/apis/people/mjbernha", 
@@ -261,6 +261,33 @@
             "size": 3
         }, 
         {
+            "name": "DCR Data Set Backend Update", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/hbailey", 
+                    "role": "dev", 
+                    "name": "Helen"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/nancymcg", 
+                    "role": "owner", 
+                    "name": "Nance"
+                }
+            ], 
+            "url": null, 
+            "repo": null, 
+            "start": "2015-08-15", 
+            "sponsor": "Curation and Preservation Services", 
+            "complete": null, 
+            "target": "2015-11-30", 
+            "inception": "2014-10-01", 
+            "categories": [
+                "Visualization", 
+                "Digital Preservation"
+            ], 
+            "size": 2
+        }, 
+        {
             "name": "Deployment Infrastructure", 
             "contributors": [
                 {
@@ -353,6 +380,32 @@
                 "DSpace"
             ], 
             "size": 3
+        }, 
+        {
+            "name": "DLAD Portfolio Visualization", 
+            "contributors": [
+                {
+                    "url": "http://m.mit.edu/apis/people/hbailey", 
+                    "role": "dev", 
+                    "name": "Helen"
+                }, 
+                {
+                    "url": "http://m.mit.edu/apis/people/cquirion", 
+                    "role": "owner", 
+                    "name": "Christine"
+                }
+            ], 
+            "url": "http://dlad-portfolio.herokuapp.com/", 
+            "repo": "https://github.com/MITLibraries/portfolio", 
+            "start": "2015-09-08", 
+            "sponsor": "DLAD", 
+            "complete": null, 
+            "target": "2015-09-30", 
+            "inception": "2015-09-01", 
+            "categories": [
+                "Visualization"
+            ], 
+            "size": 2
         }
     ]
 }

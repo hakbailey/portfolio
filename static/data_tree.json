@@ -5,7 +5,7 @@
             "name": "User Experience", 
             "children": [
                 {
-                    "name": "Wordpress deploy infrastructure", 
+                    "name": "Wordpress Deploy Infrastructure", 
                     "contributors": [
                         {
                             "url": "http://m.mit.edu/apis/people/mjbernha", 
@@ -31,7 +31,7 @@
                     "size": 2
                 }, 
                 {
-                    "name": "Wordpress platform development", 
+                    "name": "Wordpress Platform Development", 
                     "contributors": [
                         {
                             "url": "http://m.mit.edu/apis/people/mjbernha", 
@@ -162,6 +162,132 @@
             ]
         }, 
         {
+            "name": "Curation and Preservation Services", 
+            "children": [
+                {
+                    "name": "DCR Data Set Backend Update", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/hbailey", 
+                            "role": "dev", 
+                            "name": "Helen"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/nancymcg", 
+                            "role": "owner", 
+                            "name": "Nance"
+                        }
+                    ], 
+                    "url": null, 
+                    "repo": null, 
+                    "start": "2015-08-15", 
+                    "sponsor": "Curation and Preservation Services", 
+                    "complete": null, 
+                    "target": "2015-11-30", 
+                    "inception": "2014-10-01", 
+                    "categories": [
+                        "Visualization", 
+                        "Digital Preservation"
+                    ], 
+                    "size": 2
+                }, 
+                {
+                    "name": "Handbag", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/rrodgers", 
+                            "role": "dev", 
+                            "name": "Richard"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/hbailey", 
+                            "role": "dev", 
+                            "name": "Helen"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/nancymcg", 
+                            "role": "owner", 
+                            "name": "Nancy"
+                        }
+                    ], 
+                    "url": "https://github.com/MITLibraries/handbag", 
+                    "repo": "https://github.com/MITLibraries/handbag", 
+                    "start": "2015-03-19", 
+                    "sponsor": "Curation and Preservation Services", 
+                    "complete": null, 
+                    "target": "2015-08-31", 
+                    "inception": "2015-01-21", 
+                    "categories": [
+                        "Digital Preservation"
+                    ], 
+                    "size": 2
+                }
+            ]
+        }, 
+        {
+            "name": "DLAD", 
+            "children": [
+                {
+                    "name": "DLAD Portfolio Visualization", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/hbailey", 
+                            "role": "dev", 
+                            "name": "Helen"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/cquirion", 
+                            "role": "owner", 
+                            "name": "Christine"
+                        }
+                    ], 
+                    "url": "http://dlad-portfolio.herokuapp.com/", 
+                    "repo": "https://github.com/MITLibraries/portfolio", 
+                    "start": "2015-09-08", 
+                    "sponsor": "DLAD", 
+                    "complete": null, 
+                    "target": "2015-09-30", 
+                    "inception": "2015-09-01", 
+                    "categories": [
+                        "Visualization"
+                    ], 
+                    "size": 2
+                }, 
+                {
+                    "name": "Deployment Infrastructure", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/mjbernha", 
+                            "role": "dev", 
+                            "name": "Matt"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/mgraves", 
+                            "role": "dev", 
+                            "name": "Mike"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/rrodgers", 
+                            "role": "owner", 
+                            "name": "Richard"
+                        }
+                    ], 
+                    "url": "https://github.mit.edu/mitLibraries/dspace_deployment", 
+                    "repo": "https://github.mit.edu/mitLibraries/dspace_deployment", 
+                    "start": "2015-08-20", 
+                    "sponsor": "DLAD", 
+                    "complete": null, 
+                    "target": "2015-10-30", 
+                    "inception": "2015-08-01", 
+                    "categories": [
+                        "DSpace", 
+                        "IR"
+                    ], 
+                    "size": 4
+                }
+            ]
+        }, 
+        {
             "name": "DSpace ORCID Integration", 
             "contributors": [
                 {
@@ -191,38 +317,6 @@
                 "DSpace"
             ], 
             "size": 3
-        }, 
-        {
-            "name": "Deployment Infrastructure", 
-            "contributors": [
-                {
-                    "url": "http://m.mit.edu/apis/people/mjbernha", 
-                    "role": "dev", 
-                    "name": "Matt"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/mgraves", 
-                    "role": "dev", 
-                    "name": "Mike"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/rrodgers", 
-                    "role": "owner", 
-                    "name": "Richard"
-                }
-            ], 
-            "url": "https://github.mit.edu/mitLibraries/dspace_deployment", 
-            "repo": "https://github.mit.edu/mitLibraries/dspace_deployment", 
-            "start": "2015-08-20", 
-            "sponsor": "DLAD", 
-            "complete": null, 
-            "target": "2015-10-30", 
-            "inception": "2015-08-01", 
-            "categories": [
-                "DSpace", 
-                "IR"
-            ], 
-            "size": 4
         }, 
         {
             "name": "GIS Workflow Infrastructure", 
@@ -306,37 +400,6 @@
                 "Doc Services"
             ], 
             "size": 3
-        }, 
-        {
-            "name": "Handbag", 
-            "contributors": [
-                {
-                    "url": "http://m.mit.edu/apis/people/rrodgers", 
-                    "role": "dev", 
-                    "name": "Richard"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/hbailey", 
-                    "role": "dev", 
-                    "name": "Helen"
-                }, 
-                {
-                    "url": "http://m.mit.edu/apis/people/nancymcg", 
-                    "role": "owner", 
-                    "name": "Nancy"
-                }
-            ], 
-            "url": "https://github.com/MITLibraries/handbag", 
-            "repo": "https://github.com/MITLibraries/handbag", 
-            "start": "2015-03-19", 
-            "sponsor": "Curation and Preservation Services", 
-            "complete": null, 
-            "target": "2015-08-31", 
-            "inception": "2015-01-21", 
-            "categories": [
-                "Digital Preservation"
-            ], 
-            "size": 2
         }, 
         {
             "name": "E-book Access", 

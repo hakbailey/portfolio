@@ -12,7 +12,6 @@ var w = $('.viz').width(),
 	node;
 
 var colors = set_colors();
-console.log(colors);
 
 var treemap = d3.layout.treemap()
 	.round(false)
@@ -103,8 +102,8 @@ d3.json("static/data_tree.json", function(data) {
 		})
 		.attr("show", "new")
 		.append("svg:rect")
-		.attr("width", function(d) { return d.dx - 4; })
-		.attr("height", function(d) { return d.dy - 4; })
+		.attr("width", function(d) { return d.dx - 5; })
+		.attr("height", function(d) { return d.dy - 5; })
 		.style("fill", function(d) { 
 			if (d.children) {
 				return "white";
@@ -176,21 +175,25 @@ d3.json("static/data_tree.json", function(data) {
 
 	cell.append("text")
 		.text(function(d) {
-			if (! d.children) {
+			if (!d.children) {
 				return d.name;
 			}
 	 	})
 	 	.each(function(d){
-	 		var w = d.dx;
-	 		var h = d.dy;
-        	d3plus.textwrap()
-        		.container(d3.select(this))
-        		.width(w - 10)
-        		.height(h)
-        		.x(4)
-        		.align('middle')
-        		.valign('middle')
-        		.draw();
+	 		if (!d.children) {
+		 		var w = d.dx;
+		 		var h = d.dy;
+	        	d3plus.textwrap()
+	        		.container(d3.select(this))
+	        		.width(w - 10)
+	        		.height(h)
+	        		.x(2.5)
+	        		.align('middle')
+	        		.valign('middle')
+	        		.resize(true)
+	        		.size([10,12])
+	        		.draw();
+	        }
     	});
 
 	var legend_item = legend.select("svg")
