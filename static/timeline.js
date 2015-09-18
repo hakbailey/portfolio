@@ -187,7 +187,7 @@ d3.json("static/data_time.json", function(error, data) {
         .attr("y", 0)
         .attr("x", 9)
         .attr("dy", ".35em")
-        .attr("transform", "rotate(90)")
+        .attr("transform", "rotate(60)")
         .style("text-anchor", "start");
 
     var legend_item = legend.select("svg")
