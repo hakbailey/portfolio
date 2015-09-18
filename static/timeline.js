@@ -10,7 +10,6 @@ var color = d3.scale.ordinal()
     .range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(251,128,114)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)','rgb(188,128,189)']);
 
 var colors = set_colors();
-console.log(colors);
 
 var margin = {top: 20, right: 30, bottom: 30, left: 30},
     width = document.getElementsByClassName('viz')[0].offsetWidth - 30 - margin.left - margin.right,
@@ -22,6 +21,10 @@ var scale_start = format.parse(dates[0]);
 var scale_end = format.parse(dates[dates.length-1]);
 var midpoint = new Date((scale_start.getTime() + scale_end.getTime()) / 2);
 
+var sd = moment(dates[0]);
+var ed = moment(dates[dates.length-1]);
+var td = ed.diff(sd, 'days');
+
 var x = d3.time.scale()
     .range([0, width])
     .domain([scale_start, scale_end]);
@@ -31,7 +34,7 @@ var y = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .ticks(d3.time.months, 2)
+    .ticks(d3.time.months, 6)
     .tickFormat(d3.time.format("%b %Y"))
     .orient("bottom");
 
@@ -87,10 +90,10 @@ function set_colors() {
 
 d3.json("static/data_time.json", function(error, data) {
 
-  var rectangle = svgContainer.selectAll(".graph")
-    .data(data.projects)
-    .enter()
-    .append("g");
+    var rectangle = svgContainer.selectAll(".graph")
+        .data(data.projects)
+        .enter()
+        .append("g");
 
     mover = svgContainer.append("g")
         .attr("class", "mover")
@@ -130,8 +133,12 @@ d3.json("static/data_time.json", function(error, data) {
 
     rectangle.append("text")
         .attr("x", function(d, i) {
-            var eDate = format.parse(d.target);
-            var sDate = format.parse(d.start);
+            var eDate = moment(d.target);
+            var sDate = moment(d.start);
+            var difference = eDate.diff(sDate, 'days')
+            if (td - difference < d.name.length * 4) {
+                return x(sDate) + 5;
+            }
             if (midpoint - sDate > eDate - midpoint) {
                 return x(eDate) + 5;
             }
@@ -197,7 +204,6 @@ d3.json("static/data_time.json", function(error, data) {
         .attr("x", 20)
         .attr("y", 15)
         .attr("class", "small")
-        // .attr("text-anchor", "left")
         .text(function(d) { return d; });
 
     });

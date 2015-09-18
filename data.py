@@ -27,12 +27,13 @@ def process_treemap(data_file):
 				'children': []
 				})
 
-		for i in range(len(data['projects']) - 1, -1, -1):
-
-			for s in multi_sponsors:
+		for s in multi_sponsors:
+			for i in range(len(data['projects']) - 1, -1, -1):
 				if data['projects'][i]['sponsor'] == s:
 					k = find(new_data['children'], 'name', s)
 					new_data['children'][k]['children'].append(data['projects'].pop(i))
+					
+		for i in range(len(data['projects']) - 1, -1, -1):
 			try:
 				new_data['children'].append(data['projects'].pop(i))
 			except:

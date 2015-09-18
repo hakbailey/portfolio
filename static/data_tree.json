@@ -2,6 +2,68 @@
     "name": "DLAD", 
     "children": [
         {
+            "name": "User Experience", 
+            "children": [
+                {
+                    "name": "Wordpress deploy infrastructure", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/mjbernha", 
+                            "role": "dev", 
+                            "name": "Matt"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/pbruk", 
+                            "role": "dev", 
+                            "name": "Phillip"
+                        }
+                    ], 
+                    "url": "https://github.mit.edu/mitlibraries/wordpress_deployment", 
+                    "repo": "https://github.mit.edu/mitlibraries/wordpress_deployment", 
+                    "start": "2014-11-25", 
+                    "sponsor": "User Experience", 
+                    "complete": null, 
+                    "target": "2015-10-31", 
+                    "inception": "2014-11-05", 
+                    "categories": [
+                        "Communication"
+                    ], 
+                    "size": 2
+                }, 
+                {
+                    "name": "Wordpress platform development", 
+                    "contributors": [
+                        {
+                            "url": "http://m.mit.edu/apis/people/mjbernha", 
+                            "role": "dev", 
+                            "name": "Matt"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/pbruk", 
+                            "role": "dev", 
+                            "name": "Phillip"
+                        }, 
+                        {
+                            "url": "http://m.mit.edu/apis/people/darcy", 
+                            "role": "owner", 
+                            "name": "Darcy"
+                        }
+                    ], 
+                    "url": "https://basecamp.com/2612667/projects/9123052", 
+                    "repo": "https://github.com/mitlibraries-ux/MITlibraries-parent", 
+                    "start": "2014-01-01", 
+                    "sponsor": "User Experience", 
+                    "complete": null, 
+                    "target": "2015-12-31", 
+                    "inception": "2014-01-01", 
+                    "categories": [
+                        "Communication"
+                    ], 
+                    "size": 5
+                }
+            ]
+        }, 
+        {
             "name": "Scholarly Publishing", 
             "children": [
                 {

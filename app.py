@@ -1,20 +1,22 @@
 from flask import Flask
 from flask import render_template
-from data import get_dates, process_timeline, process_treemap
+from data import get_dates, process_timeline, process_treemap, write_to_json
 
 app = Flask(__name__)
 
 @app.route("/timeline")
 def timeline():
 	dates = get_dates('static/dlad_portfolio.json')
-	data = process_timeline('static/dlad_portfolio.json')
-	return render_template("timeline.html", data=data, dates=dates)
+	time_data = process_timeline('static/dlad_portfolio.json')
+	write_to_json('static/data_time.json', time_data)
+	return render_template("timeline.html", data=time_data, dates=dates)
 
 @app.route("/")
 @app.route("/treemap")
 def treemap():
-	data = process_treemap('static/dlad_portfolio.json')
-	return render_template("treemap.html", data=data)
+	tree_data = process_treemap('static/dlad_portfolio.json')
+	write_to_json('static/data_tree.json', tree_data)
+	return render_template("treemap.html", data=tree_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

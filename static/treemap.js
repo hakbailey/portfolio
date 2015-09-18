@@ -183,8 +183,9 @@ d3.json("static/data_tree.json", function(data) {
 	 		var h = d.dy;
         	d3plus.textwrap()
         		.container(d3.select(this))
-        		.width(w)
+        		.width(w - 10)
         		.height(h)
+        		.x(4)
         		.align('middle')
         		.valign('middle')
         		.draw();
