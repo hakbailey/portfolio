@@ -2,9 +2,10 @@ var sponsors = get_sponsors(data);
 var mover;
 
 var dates = JSON.parse(dates);
+var todays_date = new Date();
 
-var drag = d3.behavior.drag()
-    .on("drag", dragmove);
+// var drag = d3.behavior.drag()
+//     .on("drag", dragmove);
 
 var color = d3.scale.ordinal()
     .range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)','rgb(188,128,189)','rgb(204,235,197)','rgb(255,237,111)']);
@@ -99,8 +100,8 @@ d3.json("static/data_time.json", function(error, data) {
     mover = svgContainer.append("g")
         .attr("class", "mover")
         .attr("x", "0")
-        .attr("y", "0")
-        .call(drag);
+        .attr("y", "0");
+        // .call(drag);
 
     rectangle.append("rect")
         .attr("x", function(d,i) {
@@ -108,28 +109,59 @@ d3.json("static/data_time.json", function(error, data) {
             return x(date);
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 1.8;
+            return height/dates.length * i * 2;
         })
         .attr("width", function(d) {
             var sDate = x(format.parse(d.start));
             var eDate = x(format.parse(d.target));
             return (eDate - sDate);
         })
-        .attr("height", height/dates.length * 1.3)
+        .attr("height", height/dates.length * 1.5)
         .style("fill", function(d) { 
             return colors[d.sponsor];
         })
-        .on("mouseover", function() {
+        .on("mouseover", function(d) {
             d3.select(this)
-            .style("fill", function(d) { 
-                return 'red';
-            })
+                .style("stroke-width", 2)
+                .style("stroke", "black");
+
+            d3.selectAll(".info-text").remove();
+
+            var info_text = project_info.append("div")
+                .attr("class", "info-text")
+
+            info_text.append("h4")
+                .text(function() {
+                    return d.name;
+                });
+
+            info_text.append("h5")
+                .text("Contributors:");
+                
+            var cList = info_text.append("ul")
+                .attr("class", "contributors");
+
+            cList.selectAll("li")
+                .data(d.contributors)
+                .enter()
+                .append("li")
+                .text(function(d) {
+                    return d.name + " (" + d.role + ")";
+                });
+
+                info_text.append("p")
+                    .attr("class", "text-danger bg-danger")
+                    .text(function() {
+                        if (get_date(d.target) < todays_date) {
+                            s = "This project is past its target end date of "
+                            date = moment(get_date(d.target)).format('MMMM Do, YYYY');
+                            return s + date;
+                        }
+                    });
         })
         .on("mouseout", function() {
             d3.select(this)
-            .style("fill", function(d) {
-                return colors[d.sponsor];
-            })
+            .style("stroke-width", 0)
         });
 
     rectangle.append("text")
@@ -148,7 +180,7 @@ d3.json("static/data_time.json", function(error, data) {
             }
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 1.8 + margin.top - 1;
+            return height/dates.length * i * 2 + margin.top - 1;
              // - ((height/dates.length * 1.3) - 10)/2;
         })
         .attr("text-anchor", function(d, i) {
@@ -166,19 +198,29 @@ d3.json("static/data_time.json", function(error, data) {
         });
 
     var ruler = mover.append("line")
-        .attr("x1", "0")
-        .attr("y1", height - margin.bottom + 50)
-        .attr("x2", "0")
+        .attr("x1", function() {
+            return x(todays_date);
+        })
+        .attr("y1", height)
+        .attr("x2", function() {
+            return x(todays_date);
+        })
         .attr("y2", "0")
         .attr("stroke", "black")
         .attr("stroke-width", "1.5px");
 
-    var ball = mover.append("circle")
-        .attr("cx", "0")
-        .attr("cy", height - 20)
-        .attr("r", "15")
-        .attr("fill", "red");
+    // var today = mover.append("text")
+    //     .attr("x", function() {
+    //         return x(todays_date)+3;
+    //     })
+    //     .attr("y", 0)
+    //     .text("Today");
 
+    // var ball = mover.append("circle")
+    //     .attr("cx", "0")
+    //     .attr("cy", height - 20)
+    //     .attr("r", "15")
+    //     .attr("fill", "red");
 
     svgContainer.append("g")
         .attr("class", "x axis")
@@ -215,6 +257,19 @@ d3.json("static/data_time.json", function(error, data) {
         .text(function(d) { return d; });
 
     });
+
+    var info_text = project_info.append("div")
+            .attr("class", "info-text")
+            .append("p")
+                .text("Hover over a project for more information");
+
+function get_date(date) {
+    var y = date.slice(0, 4);
+    var m = parseInt(date.slice(5, 7)) - 1;
+    var d = parseInt(date.slice(8,10));
+    new_date = new Date(y, m, d);
+    return new_date;
+}
 
 function dragmove(d) {
     var mx = Math.max(0, Math.min(width, d3.event.x));
