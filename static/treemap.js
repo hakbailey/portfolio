@@ -54,6 +54,12 @@ legend.append("svg:svg")
 		return 20*sponsors.length;
 	});
 
+var footer = d3.select("#footer")
+	.append("p")
+	.text(function() {
+		return "Project data last updated on " + moment(today_date).format('MMMM Do, YYYY');
+	});
+
 function get_date(date) {
 	var y = date.slice(0, 4);
 	var m = parseInt(date.slice(5, 7)) - 1;

@@ -2,7 +2,7 @@ var sponsors = get_sponsors(data);
 var mover;
 
 var dates = JSON.parse(dates);
-var todays_date = new Date();
+var today_date = new Date();
 
 // var drag = d3.behavior.drag()
 //     .on("drag", dragmove);
@@ -14,7 +14,7 @@ var colors = set_colors();
 
 var margin = {top: 20, right: 30, bottom: 60, left: 30},
     width = document.getElementsByClassName('viz')[0].offsetWidth - 30 - margin.left - margin.right,
-    height = 620 - margin.top - margin.bottom,
+    height = 615 - margin.top - margin.bottom,
     rw = document.getElementsByClassName('info')[0].offsetWidth;
 
 var format = d3.time.format("%Y-%m-%d");
@@ -52,7 +52,7 @@ var project_info = d3.select(".info")
     .append("div")
     .attr("class", "project-info")
     .style("width", rw+ "px")
-    .style("height", height + margin.top + margin.bottom + "px");
+    .style("height", height + margin.top + margin.bottom + 5 + "px");
 
 var legend = d3.select(".info")
     .append("div")
@@ -69,6 +69,12 @@ legend.append("svg:svg")
     .attr("width", rw)
     .attr("height", function() {
         return 20*sponsors.length;
+    });
+
+var footer = d3.select("#footer")
+    .append("p")
+    .text(function() {
+        return "Project data last updated on " + moment(today_date).format('MMMM Do, YYYY');
     });
 
 function get_sponsors(data) {
@@ -152,7 +158,7 @@ d3.json("static/data_time.json", function(error, data) {
                 info_text.append("p")
                     .attr("class", "text-danger bg-danger")
                     .text(function() {
-                        if (get_date(d.target) < todays_date) {
+                        if (get_date(d.target) < today_date) {
                             s = "This project is past its target end date of "
                             date = moment(get_date(d.target)).format('MMMM Do, YYYY');
                             return s + date;
@@ -199,11 +205,11 @@ d3.json("static/data_time.json", function(error, data) {
 
     var ruler = mover.append("line")
         .attr("x1", function() {
-            return x(todays_date);
+            return x(today_date);
         })
         .attr("y1", height)
         .attr("x2", function() {
-            return x(todays_date);
+            return x(today_date);
         })
         .attr("y2", "0")
         .attr("stroke", "black")
@@ -211,7 +217,7 @@ d3.json("static/data_time.json", function(error, data) {
 
     // var today = mover.append("text")
     //     .attr("x", function() {
-    //         return x(todays_date)+3;
+    //         return x(today_date)+3;
     //     })
     //     .attr("y", 0)
     //     .text("Today");
