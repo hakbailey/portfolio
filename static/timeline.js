@@ -12,7 +12,7 @@ var color = d3.scale.ordinal()
 
 var colors = set_colors();
 
-var margin = {top: 20, right: 30, bottom: 60, left: 30},
+var margin = {top: 0, right: 30, bottom: 80, left: 30},
     width = document.getElementsByClassName('viz')[0].offsetWidth - 30 - margin.left - margin.right,
     height = 615 - margin.top - margin.bottom,
     rw = document.getElementsByClassName('info')[0].offsetWidth;
@@ -52,7 +52,7 @@ var project_info = d3.select(".info")
     .append("div")
     .attr("class", "project-info")
     .style("width", rw+ "px")
-    .style("height", height + margin.top + margin.bottom + 5 + "px");
+    .style("height", height + margin.top + margin.bottom + 5 - 20 + "px");
 
 var legend = d3.select(".info")
     .append("div")
@@ -186,7 +186,7 @@ d3.json("static/data_time.json", function(error, data) {
             }
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 2 + margin.top - 1;
+            return height/dates.length * i * 2 + 20 + margin.top - 1;
              // - ((height/dates.length * 1.3) - 10)/2;
         })
         .attr("text-anchor", function(d, i) {
@@ -213,7 +213,7 @@ d3.json("static/data_time.json", function(error, data) {
         })
         .attr("y2", "0")
         .attr("stroke", "black")
-        .attr("stroke-width", "1.5px");
+        .attr("stroke-width", "1px");
 
     // var today = mover.append("text")
     //     .attr("x", function() {

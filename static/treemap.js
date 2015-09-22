@@ -15,7 +15,7 @@ var colors = set_colors();
 
 var treemap = d3.layout.treemap()
 	.round(false)
-	.size([w, h])
+	.size([w, h-20])
 	.sticky(true)
 	.value(function(d) { return d.size * d.size; })
 	.padding(null);
@@ -35,7 +35,7 @@ var project_info = d3.select(".info")
 	.append("div")
 	.attr("class", "project-info")
 	.style("width", rw+ "px")
-	.style("height", h + "px");
+	.style("height", h-20 + "px");
 
 var legend = d3.select(".info")
 	.append("div")
