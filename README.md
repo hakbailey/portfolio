@@ -1,3 +1,3 @@
 # portfolio
-Prototype project portfolio visualization for DLAD:
-https://dlad-portfolio.herokuapp.com/
+Prototype project inventory visualization for ITDD:
+https://itdd-projects.herokuapp.com/
