@@ -13,7 +13,7 @@ var colors = set_colors();
 
 var margin = {top: 20, right: 30, bottom: 60, left: 30},
     width = document.getElementsByClassName('viz')[0].offsetWidth - 30 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
+    height = 620 - margin.top - margin.bottom,
     rw = document.getElementsByClassName('info')[0].offsetWidth;
 
 var format = d3.time.format("%Y-%m-%d");
@@ -51,7 +51,7 @@ var project_info = d3.select(".info")
     .append("div")
     .attr("class", "project-info")
     .style("width", rw+ "px")
-    .style("height", height + margin.bottom + "px");
+    .style("height", height + margin.top + margin.bottom + "px");
 
 var legend = d3.select(".info")
     .append("div")
@@ -148,7 +148,8 @@ d3.json("static/data_time.json", function(error, data) {
             }
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 1.8 + margin.top - ((height/dates.length * 1.3) - 10)/2;
+            return height/dates.length * i * 1.8 + margin.top - 1;
+             // - ((height/dates.length * 1.3) - 10)/2;
         })
         .attr("text-anchor", function(d, i) {
             if (midpoint - format.parse(d.start) > format.parse(d.target) - midpoint) {

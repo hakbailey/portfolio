@@ -1,9 +1,30 @@
 {
-    "name": "DLAD", 
+    "name": "ITDD", 
     "children": [
         {
             "name": "User Experience", 
             "children": [
+                {
+                    "name": "Sample UX Project", 
+                    "contributors": [
+                        {
+                            "role": "owner", 
+                            "name": "Christine"
+                        }
+                    ], 
+                    "url": null, 
+                    "repo": null, 
+                    "start": "2015-09-25", 
+                    "department": "UX", 
+                    "sponsor": "User Experience", 
+                    "complete": null, 
+                    "target": "2015-12-31", 
+                    "inception": "2015-09-22", 
+                    "categories": [
+                        "User Experience"
+                    ], 
+                    "size": 2
+                }, 
                 {
                     "name": "Wordpress Deploy Infrastructure", 
                     "contributors": [
@@ -21,6 +42,7 @@
                     "url": "https://github.mit.edu/mitlibraries/wordpress_deployment", 
                     "repo": "https://github.mit.edu/mitlibraries/wordpress_deployment", 
                     "start": "2014-11-25", 
+                    "department": "DLAD", 
                     "sponsor": "User Experience", 
                     "complete": null, 
                     "target": "2015-10-31", 
@@ -52,6 +74,7 @@
                     "url": "https://basecamp.com/2612667/projects/9123052", 
                     "repo": "https://github.com/mitlibraries-ux/MITlibraries-parent", 
                     "start": "2014-01-01", 
+                    "department": "DLAD", 
                     "sponsor": "User Experience", 
                     "complete": null, 
                     "target": "2015-12-31", 
@@ -88,6 +111,7 @@
                     "url": "https://github.com/MITLibraries/oastats-backend", 
                     "repo": "https://github.com/MITLibraries/oastats-backend", 
                     "start": "2015-08-20", 
+                    "department": "DLAD", 
                     "sponsor": "Scholarly Publishing", 
                     "complete": null, 
                     "target": "2015-10-30", 
@@ -119,6 +143,7 @@
                     "url": "https://github.mit.edu/mitlibraries/author-lookup", 
                     "repo": "https://github.mit.edu/mitlibraries/author-lookup", 
                     "start": "2015-05-20", 
+                    "department": "DLAD", 
                     "sponsor": "Scholarly Publishing", 
                     "complete": null, 
                     "target": "2015-10-30", 
@@ -150,6 +175,7 @@
                     "url": "http://waffle.io/MITLibraries/topichub", 
                     "repo": "https://github.com/MITLibraries/topichub", 
                     "start": "2015-03-01", 
+                    "department": "DLAD", 
                     "sponsor": "Scholarly Publishing", 
                     "complete": null, 
                     "target": "2015-08-30", 
@@ -181,6 +207,7 @@
                     "url": null, 
                     "repo": null, 
                     "start": "2015-08-15", 
+                    "department": "DLAD", 
                     "sponsor": "Curation and Preservation Services", 
                     "complete": null, 
                     "target": "2015-11-30", 
@@ -213,6 +240,7 @@
                     "url": "https://github.com/MITLibraries/handbag", 
                     "repo": "https://github.com/MITLibraries/handbag", 
                     "start": "2015-03-19", 
+                    "department": "DLAD", 
                     "sponsor": "Curation and Preservation Services", 
                     "complete": null, 
                     "target": "2015-08-31", 
@@ -244,6 +272,7 @@
                     "url": "http://dlad-portfolio.herokuapp.com/", 
                     "repo": "https://github.com/MITLibraries/portfolio", 
                     "start": "2015-09-08", 
+                    "department": "DLAD", 
                     "sponsor": "DLAD", 
                     "complete": null, 
                     "target": "2015-09-30", 
@@ -275,6 +304,7 @@
                     "url": "https://github.mit.edu/mitLibraries/dspace_deployment", 
                     "repo": "https://github.mit.edu/mitLibraries/dspace_deployment", 
                     "start": "2015-08-20", 
+                    "department": "DLAD", 
                     "sponsor": "DLAD", 
                     "complete": null, 
                     "target": "2015-10-30", 
@@ -309,6 +339,7 @@
             "url": "https://basecamp.com/2612667/projects/5842953", 
             "repo": "https://basecamp.com/2612667/projects/5842953", 
             "start": "2015-08-20", 
+            "department": "DLAD", 
             "sponsor": "Repository Services", 
             "complete": null, 
             "target": "2016-03-30", 
@@ -335,6 +366,7 @@
             "url": "http://waffle.io/MITLibraries/kepler", 
             "repo": "https://github.com/MITLibraries/kepler", 
             "start": "2015-04-01", 
+            "department": "DLAD", 
             "sponsor": "GIS Program", 
             "complete": null, 
             "target": "2015-08-30", 
@@ -361,6 +393,7 @@
             "url": "http://waffle.io/MITLibraries/lumos", 
             "repo": "https://github.com/MITLibraries/lumos", 
             "start": "2015-04-01", 
+            "department": "DLAD", 
             "sponsor": "Director's Office", 
             "complete": null, 
             "target": "2015-08-30", 
@@ -392,6 +425,7 @@
             "url": "https://basecamp.com/2612667/projects/5842953", 
             "repo": "https://basecamp.com/2612667/projects/5842953", 
             "start": "2015-03-20", 
+            "department": "DLAD", 
             "sponsor": "IDLA", 
             "complete": null, 
             "target": "2015-10-30", 
@@ -418,6 +452,7 @@
             "url": "https://github.com/MITLibraries/ebooks", 
             "repo": "https://github.com/MITLibraries/ebooks", 
             "start": "2015-03-01", 
+            "department": "DLAD", 
             "sponsor": "Collections", 
             "complete": null, 
             "target": "2015-08-30", 
