@@ -102,8 +102,8 @@ d3.json("static/data_tree.json", function(data) {
 		})
 		.attr("show", "new")
 		.append("svg:rect")
-		.attr("width", function(d) { return d.dx - 5; })
-		.attr("height", function(d) { return d.dy - 5; })
+		.attr("width", function(d) { return d.dx - 4; })
+		.attr("height", function(d) { return d.dy - 4; })
 		.style("fill", function(d) { 
 			if (d.children) {
 				return "white";
@@ -111,15 +111,17 @@ d3.json("static/data_tree.json", function(data) {
 				return colors[d.sponsor]; 
 			}
 		})
-		.style("stroke", function(d) {
-			if (!d.children) {
-				if (get_date(d.target) < today_date) {
-					return "red";
-				} else {
-					return "white";
-				}
-			}
-		})
+		// // Add red border around projects that are overdue
+		// .style("stroke", function(d) {
+		// 	if (!d.children) {
+		// 		if (get_date(d.target) < today_date) {
+		// 			return "red";
+		// 		} else {
+		// 			return "white";
+		// 		}
+		// 	}
+		// })
+		.style("stroke", "white")
 		.style("stroke-width", 2)
 		.on("mouseover", function(d) {
 			if (!d.children) {
@@ -164,13 +166,15 @@ d3.json("static/data_tree.json", function(data) {
 		})
 		.on("mouseout", function() {
 			d3.select(this)
-				.style("stroke", function(d) {
-					if (get_date(d.target) < today_date) {
-						return "red";
-					} else {
-						return "white";
-					}
-				});
+				// // Add red border around projects that are overdue
+				// .style("stroke", function(d) {
+				// 	if (get_date(d.target) < today_date) {
+				// 		return "red";
+				// 	} else {
+				// 		return "white";
+				// 	}
+				// });
+				.style("stroke", "white");
 		})
 
 	cell.append("text")
