@@ -106,7 +106,12 @@ d3.json("static/data_time.json", function(error, data) {
         .attr("x", "0")
         .attr("y", "0");
 
-    rectangle.append("rect")
+    rectangle.append("a")
+        .attr("xlink:href", function(d) {
+            return d.url;
+        })
+        .attr("show", "new")
+        .append("rect")
         .attr("x", function(d,i) {
             var date = format.parse(d.start);
             return x(date);
