@@ -8,7 +8,7 @@ def process_treemap(data_file):
 		data = json.load(input_data)
 		sponsors = []
 		multi_sponsors = []
-		new_data = {'name': data['name'], 'children': []}
+		new_data = {'name': data['name'], 'updated': data['updated'], 'children': []}
 
 		projects = sorted(data['projects'], key=itemgetter('start'))
 		data['projects'] = projects

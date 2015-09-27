@@ -74,7 +74,8 @@ legend.append("svg:svg")
 var footer = d3.select("#footer")
     .append("p")
     .text(function() {
-        return "Project data last updated on " + moment(today_date).format('MMMM Do, YYYY');
+        d = JSON.parse(data);
+        return "Project data last updated on " + moment(d.updated).format('MMMM Do, YYYY');
     });
 
 function get_sponsors(data) {
