@@ -118,16 +118,6 @@ d3.json("static/data_tree.json", function(data) {
 				return colors[d.sponsor]; 
 			}
 		})
-		// // Add red border around projects that are overdue
-		// .style("stroke", function(d) {
-		// 	if (!d.children) {
-		// 		if (get_date(d.target) < today_date) {
-		// 			return "red";
-		// 		} else {
-		// 			return "white";
-		// 		}
-		// 	}
-		// })
 		.style("stroke", "white")
 		.style("stroke-width", 2)
 		.on("mouseover", function(d) {
@@ -138,52 +128,74 @@ d3.json("static/data_tree.json", function(data) {
 				d3.selectAll(".info-text").remove();
 
 				var info_text = project_info.append("div")
-					.attr("class", "info-text")
+	                .attr("class", "info-text");
 
-				info_text.append("h4")
-					.text(function() {
-						return d.name;
-					});
+	            info_text.append("h4")
+	                .text(function() {
+	                    return d.name;
+	                });
 
-				info_text.append("h5")
-					.text("Contributors:");
-				
-				var cList = info_text.append("ul")
-					.attr("class", "contributors");
+	            var infoList = info_text.append("ul")
+	                .attr("class", "project-info");
 
-				cList.selectAll("li")
-					.data(d.contributors)
-					.enter()
-					.append("li")
-					.text(function(d) {
-						return d.name + " (" + d.role + ")";
-					});
+	            infoList.append("li")
+	                .text(function() {
+	                    return "Start date: " + moment(get_date(d.start)).format('MMMM Do, YYYY');
+	                });
 
-                info_text.append("p")
-                    .attr("class", "text-danger bg-danger")
-                    .text(function() {
-                        if (d.complete == null) {
-                            if (get_date(d.target) < today_date) {
-                                s = "This project is past its target end date of "
-                                date = moment(get_date(d.target)).format('MMMM Do, YYYY');
-                                return s + date;
-                            }
-                        }
-                    });
-			}
-		})
-		.on("mouseout", function() {
-			d3.select(this)
-				// // Add red border around projects that are overdue
-				// .style("stroke", function(d) {
-				// 	if (get_date(d.target) < today_date) {
-				// 		return "red";
-				// 	} else {
-				// 		return "white";
-				// 	}
-				// });
-				.style("stroke", "white");
-		})
+	            infoList.append("li")
+	                .text(function() {
+	                    return "Target end date: " + moment(get_date(d.target)).format('MMMM Do, YYYY');
+	                });    
+
+	            infoList.append("li")
+	                .text(function() {
+	                    return "Sponsor: " + d.sponsor;
+	                });         
+
+	            var conList = infoList.append("li")
+	                .text("Contributors:")
+	                .append("ul")
+	                .attr("class", "contributors");
+
+	            conList.selectAll("li")
+	                .data(d.contributors)
+	                .enter()
+	                .append("li")
+	                .text(function(d) {
+	                    return d.name + " (" + d.role + ")";
+	                });
+
+	                info_text.append("p")
+	                    .attr("class", "text-danger bg-danger")
+	                    .text(function() {
+	                        if (d.complete == null) {
+	                            if (get_date(d.target) < today_date) {
+	                                s = "This project is past its target end date of "
+	                                date = moment(get_date(d.target)).format('MMMM Do, YYYY');
+	                                return s + date;
+	                            }
+	                        }
+	                    });
+
+	            var catList = infoList.append("li")
+	                .text("Categories:")
+	                .append("ul")
+	                .attr("class", "categories");
+
+	            catList.selectAll("li")
+	                .data(d.categories)
+	                .enter()
+	                .append("li")
+	                .text(function(d) {
+	                    return d;
+	                });
+	        }
+        })
+        .on("mouseout", function() {
+            d3.select(this)
+            .style("stroke-width", 0)
+        });
 
 	cell.append("text")
 		.text(function(d) {

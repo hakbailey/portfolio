@@ -4,9 +4,6 @@ var mover;
 var dates = JSON.parse(dates);
 var today_date = new Date();
 
-// var drag = d3.behavior.drag()
-//     .on("drag", dragmove);
-
 var color = d3.scale.ordinal()
     .range(['rgb(141,211,199)','rgb(255,255,179)','rgb(190,186,218)','rgb(128,177,211)','rgb(253,180,98)','rgb(179,222,105)','rgb(252,205,229)','rgb(217,217,217)','rgb(188,128,189)','rgb(204,235,197)','rgb(255,237,111)']);
 
@@ -108,7 +105,6 @@ d3.json("static/data_time.json", function(error, data) {
         .attr("class", "mover")
         .attr("x", "0")
         .attr("y", "0");
-        // .call(drag);
 
     rectangle.append("rect")
         .attr("x", function(d,i) {
@@ -142,13 +138,30 @@ d3.json("static/data_time.json", function(error, data) {
                     return d.name;
                 });
 
-            info_text.append("h5")
-                .text("Contributors:");
-                
-            var cList = info_text.append("ul")
+            var infoList = info_text.append("ul")
+                .attr("class", "project-info");
+
+            infoList.append("li")
+                .text(function() {
+                    return "Start date: " + moment(get_date(d.start)).format('MMMM Do, YYYY');
+                });
+
+            infoList.append("li")
+                .text(function() {
+                    return "Target end date: " + moment(get_date(d.target)).format('MMMM Do, YYYY');
+                });    
+
+            infoList.append("li")
+                .text(function() {
+                    return "Sponsor: " + d.sponsor;
+                });         
+
+            var conList = infoList.append("li")
+                .text("Contributors:")
+                .append("ul")
                 .attr("class", "contributors");
 
-            cList.selectAll("li")
+            conList.selectAll("li")
                 .data(d.contributors)
                 .enter()
                 .append("li")
@@ -167,6 +180,19 @@ d3.json("static/data_time.json", function(error, data) {
                             }
                         }
                     });
+
+            var catList = infoList.append("li")
+                .text("Categories:")
+                .append("ul")
+                .attr("class", "categories");
+
+            catList.selectAll("li")
+                .data(d.categories)
+                .enter()
+                .append("li")
+                .text(function(d) {
+                    return d;
+                });
         })
         .on("mouseout", function() {
             d3.select(this)
@@ -190,7 +216,6 @@ d3.json("static/data_time.json", function(error, data) {
         })
         .attr("y", function(d, i) {
             return height/dates.length * i * 2 + 20 + margin.top - 1;
-             // - ((height/dates.length * 1.3) - 10)/2;
         })
         .attr("text-anchor", function(d, i) {
             if (midpoint - format.parse(d.start) > format.parse(d.target) - midpoint) {
@@ -217,19 +242,6 @@ d3.json("static/data_time.json", function(error, data) {
         .attr("y2", "0")
         .attr("stroke", "black")
         .attr("stroke-width", "1px");
-
-    // var today = mover.append("text")
-    //     .attr("x", function() {
-    //         return x(today_date)+3;
-    //     })
-    //     .attr("y", 0)
-    //     .text("Today");
-
-    // var ball = mover.append("circle")
-    //     .attr("cx", "0")
-    //     .attr("cy", height - 20)
-    //     .attr("r", "15")
-    //     .attr("fill", "red");
 
     svgContainer.append("g")
         .attr("class", "x axis")

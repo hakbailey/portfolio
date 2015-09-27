@@ -45,6 +45,10 @@ text {
   pointer-events: none;
 }
 
+ul {
+  padding-left: 20px;
+}
+
 /*rect {
   fill: none;
   border: none;
