@@ -115,7 +115,7 @@ d3.json("static/data_time.json", function(error, data) {
             return x(date);
         })
         .attr("y", function(d, i) {
-            return height/dates.length * i * 2;
+            return 1 + height/dates.length * i * 2;
         })
         .attr("width", function(d) {
             var sDate = x(format.parse(d.start));
@@ -158,10 +158,12 @@ d3.json("static/data_time.json", function(error, data) {
                 info_text.append("p")
                     .attr("class", "text-danger bg-danger")
                     .text(function() {
-                        if (get_date(d.target) < today_date) {
-                            s = "This project is past its target end date of "
-                            date = moment(get_date(d.target)).format('MMMM Do, YYYY');
-                            return s + date;
+                        if (d.complete == null) {
+                            if (get_date(d.target) < today_date) {
+                                s = "This project is past its target end date of "
+                                date = moment(get_date(d.target)).format('MMMM Do, YYYY');
+                                return s + date;
+                            }
                         }
                     });
         })

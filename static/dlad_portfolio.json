@@ -1,447 +1,752 @@
 {
   "name": "ITDD",
-  "projects":
-    [
-      {
-        "name": "SCOAP3 TopicHub",
-        "url":  "http://waffle.io/MITLibraries/topichub",
-        "repo": "https://github.com/MITLibraries/topichub",
-        "size": 3,
-        "sponsor": "Scholarly Publishing",
-        "categories": [
-         "Open Access"
-        ],
-        "contributors": [
-          {
-            "name": "Richard",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/rrodgers"
-          },
-          {
-            "name": "Jeremy",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/jprevost"
-          },
-          {
-            "name": "Sean",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/sthomas"
-          }
-        ],
-        "inception": "2015-01-01",
-        "start": "2015-03-01",
-        "target": "2015-08-30",
-        "complete": null,
-        "department": "DLAD"
-      },
-      {
-        "name": "Deployment Infrastructure",
-        "url":  "https://github.mit.edu/mitLibraries/dspace_deployment",
-        "repo": "https://github.mit.edu/mitLibraries/dspace_deployment",
-        "size": 4,
-        "sponsor": "DLAD",
-        "categories": [
-          "DSpace", "IR"
-        ],
-        "contributors": [
-          {
-            "name": "Matt",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mjbernha"
-          },
-          {
-            "name": "Mike",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mgraves"
-          },
-          {
-            "name": "Richard",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/rrodgers"
-          }
-        ],
-        "inception": "2015-08-01",
-        "start": "2015-08-20",
-        "target": "2015-10-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "E-book Access",
-        "url":  "https://github.com/MITLibraries/ebooks",
-        "repo": "https://github.com/MITLibraries/ebooks",
-        "size": 2,
-        "sponsor": "Collections",
-        "categories": [
-          "ILS"
-        ],
-        "contributors": [
-          {
-            "name": "Helen",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/hbailey"
-          },
-          {
-            "name": "Lorrie",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/lorriem"
-          }
-        ],
-        "inception": "2015-01-01",
-        "start": "2015-03-01",
-        "target": "2015-08-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "Organizational Visualization Tool",
-        "url":  "http://waffle.io/MITLibraries/lumos",
-        "repo": "https://github.com/MITLibraries/lumos",
-        "size": 2,
-        "sponsor": "Director's Office",
-        "categories": [
-          "Visualization"
-        ],
-        "contributors": [
-          {
-            "name": "Helen",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/hbailey"
-          },
-          {
-            "name": "Chris",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/cbourg"
-          }
-        ],
-        "inception": "2015-03-01",
-        "start": "2015-04-01",
-        "target": "2015-08-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "GIS Workflow Infrastructure",
-        "url":  "http://waffle.io/MITLibraries/kepler",
-        "repo": "https://github.com/MITLibraries/kepler",
-        "size": 4,
-        "sponsor": "GIS Program",
-        "categories": [
-          "GIS"
-        ],
-        "contributors": [
-          {
-            "name": "Mike",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mgraves"
-          },
-          {
-            "name": "Daniel",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/dsheehan"
-          }
-        ],
-        "inception": "2015-03-01",
-        "start": "2015-04-01",
-        "target": "2015-08-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "OA Statistics Infrastructure",
-        "url": "https://github.com/MITLibraries/oastats-backend",
-        "repo": "https://github.com/MITLibraries/oastats-backend",
-        "size": 2,
-        "sponsor": "Scholarly Publishing",
-        "categories": [
-          "Open Access"
-        ],
-        "contributors": [
-          {
-            "name": "Matt",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mjbernha"
-          },
-          {
-            "name": "Mike",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mgraves"
-          },
-          {
-            "name": "Ellen",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/efinnie"
-          }
-        ],
-        "inception": "2015-08-15",
-        "start": "2015-08-20",
-        "target": "2015-10-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "DSpace Identity Lookup",
-        "url": "https://github.mit.edu/mitlibraries/author-lookup",
-        "repo": "https://github.mit.edu/mitlibraries/author-lookup",
-        "size": 3,
-        "sponsor": "Scholarly Publishing",
-        "categories": [
-          "Open Access"
-        ],
-        "contributors": [
-          {
-            "name": "Matt",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mjbernha"
-          },
-          {
-            "name": "Solh",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/szendeh"
-          },
-          {
-            "name": "Sean",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/sthomas"
-          }
-        ],
-        "inception": "2015-05-01",
-        "start": "2015-05-20",
-        "target": "2015-10-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "Doc Services Request Management",
-        "url": "https://basecamp.com/2612667/projects/5842953",
-        "repo": "https://basecamp.com/2612667/projects/5842953",
-        "size": 3,
-        "sponsor": "IDLA",
-        "categories": [
-          "Doc Services"
-        ],
-        "contributors": [
-          {
-            "name": "Matt",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mjbernha"
-          },
-          {
-            "name": "Melissa",
-            "role": "pm",
-            "url": "http://m.mit.edu/apis/people/feiden"
-          },
-          {
-            "name": "Christine",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/cquirion"
-          }
-        ],
-        "inception": "2015-02-26",
-        "start": "2015-03-20",
-        "target": "2015-10-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "DSpace ORCID Integration",
-        "url": "https://basecamp.com/2612667/projects/5842953",
-        "repo": "https://basecamp.com/2612667/projects/5842953",
-        "size": 3,
-        "sponsor": "Repository Services",
-        "categories": [
-          "DSpace"
-        ],
-        "contributors": [
-          {
-            "name": "Richard",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/rrodgers"
-          },
-          {
-            "name": "Beverly",
-            "role": "pm",
-            "url": "http://m.mit.edu/apis/people/bturner"
-          },
-          {
-            "name": "Sean",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/sthomas"
-          }
-        ],
-        "inception": "2015-02-26",
-        "start": "2015-08-20",
-        "target": "2016-03-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "Handbag",
-        "url": "https://github.com/MITLibraries/handbag",
-        "repo": "https://github.com/MITLibraries/handbag",
-        "size": 2,
-        "sponsor": "Curation and Preservation Services",
-        "categories": [
-          "Digital Preservation"
-        ],
-        "contributors": [
-          {
-            "name": "Richard",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/rrodgers"
-          },
-          {
-            "name": "Helen",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/hbailey"
-          },
-          {
-            "name": "Nancy",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/nancymcg"
-          }
-        ],
-        "inception": "2015-01-21",
-        "start": "2015-03-19",
-        "target": "2015-08-31",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "Wordpress Deploy Infrastructure",
-        "url": "https://github.mit.edu/mitlibraries/wordpress_deployment",
-        "repo": "https://github.mit.edu/mitlibraries/wordpress_deployment",
-        "size": 2,
-        "sponsor": "User Experience",
-        "categories": [
-          "Communication"
-        ],
-        "contributors": [
-          {
-            "name": "Matt",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mjbernha"
-          },
-          {
-            "name": "Phillip",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/pbruk"
-          }
-        ],
-        "inception": "2014-11-05",
-        "start": "2014-11-25",
-        "target": "2015-10-31",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "Wordpress Platform Development",
-        "url": "https://basecamp.com/2612667/projects/9123052",
-        "repo": "https://github.com/mitlibraries-ux/MITlibraries-parent",
-        "size": 5,
-        "sponsor": "User Experience",
-        "categories": [
-          "Communication"
-        ],
-        "contributors": [
-          {
-            "name": "Matt",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/mjbernha"
-          },
-          {
-            "name": "Phillip",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/pbruk"
-          },
-          {
-            "name": "Darcy",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/darcy"
-          }
-        ],
-        "inception": "2014-01-01",
-        "start": "2014-01-01",
-        "target": "2015-12-31",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "DLAD Portfolio Visualization",
-        "url": "http://dlad-portfolio.herokuapp.com/",
-        "repo": "https://github.com/MITLibraries/portfolio",
-        "size": 2,
-        "sponsor": "DLAD",
-        "categories": [
-          "Visualization"
-        ],
-        "contributors": [
-          {
-            "name": "Helen",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/hbailey"
-          },
-          {
-            "name": "Christine",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/cquirion"
-          }
-        ],
-        "inception": "2015-09-01",
-        "start": "2015-09-08",
-        "target": "2015-09-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "DCR Data Set Backend Update",
-        "url": null,
-        "repo": null,
-        "size": 2,
-        "sponsor": "Curation and Preservation Services",
-        "categories": [
-          "Visualization",
-          "Digital Preservation"
-        ],
-        "contributors": [
-          {
-            "name": "Helen",
-            "role": "dev",
-            "url": "http://m.mit.edu/apis/people/hbailey"
-          },
-          {
-            "name": "Nance",
-            "role": "owner",
-            "url": "http://m.mit.edu/apis/people/nancymcg"
-          }
-        ],
-        "inception": "2014-10-01",
-        "start": "2015-08-15",
-        "target": "2015-11-30",
-        "complete": null,
-        "department": "DLAD"
-     },
-     {
-        "name": "Sample UX Project",
-        "url": null,
-        "repo": null,
-        "size": 2,
-        "sponsor": "User Experience",
-        "categories": [
-          "User Experience"
-        ],
-        "contributors": [
-          {
-            "name": "Christine",
-            "role": "owner"
-          }
-        ],
-        "inception": "2015-09-22",
-        "start": "2015-09-25",
-        "target":"2015-12-31",
-        "complete": null,
-        "department": "UX"
-      }
-    ]
+  "projects": [
+    {
+      "name": "SCOAP3 TopicHub",
+      "url": "http://waffle.io/MITLibraries/topichub",
+      "repo": "https://github.com/MITLibraries/topichub",
+      "size": 3,
+      "sponsor": "Scholarly Publishing",
+      "categories": [
+        "Open Access"
+      ],
+      "contributors": [
+        {
+          "name": "Richard Rodgers",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        },
+        {
+          "name": "Jeremy Prevost",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/jprevost"
+        },
+        {
+          "name": "Sean Thomas",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/sthomas"
+        }
+      ],
+      "inception": "2015-01-01",
+      "start": "2015-03-01",
+      "target": "2015-09-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "Deployment Infrastructure",
+      "url": "https://github.mit.edu/mitLibraries/dspace_deployment",
+      "repo": "https://github.mit.edu/mitLibraries/dspace_deployment",
+      "size": 4,
+      "sponsor": "DLAD",
+      "categories": [
+        "DSpace",
+        "IR"
+      ],
+      "contributors": [
+        {
+          "name": "Matt Berhnhardt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Mike Graves",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mgraves"
+        },
+        {
+          "name": "Richard Rodgers",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        }
+      ],
+      "inception": "2015-08-01",
+      "start": "2015-08-20",
+      "target": "2015-10-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "E-book Access Solution",
+      "url": "https://github.com/MITLibraries/ebooks",
+      "repo": "https://github.com/MITLibraries/ebooks",
+      "size": 4,
+      "sponsor": "Collections Strategy",
+      "categories": [
+        "ILS",
+        "Digital Content",
+        "Collections"
+      ],
+      "contributors": [
+        {
+          "name": "Helen Bailey",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Lorrie McAllister",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/lorriem"
+        },
+        {
+          "name": "Darcy Duke",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        }
+      ],
+      "inception": "2015-01-01",
+      "start": "2015-03-01",
+      "target": "2015-10-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "Organizational Visualization Tool",
+      "url": "http://waffle.io/MITLibraries/lumos",
+      "repo": "https://github.com/MITLibraries/lumos",
+      "size": 2,
+      "sponsor": "Director's Office",
+      "categories": [
+        "Visualization",
+        "Organization"
+      ],
+      "contributors": [
+        {
+          "name": "Helen Bailey",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Chris Bourg",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/cbourg"
+        }
+      ],
+      "inception": "2015-03-01",
+      "start": "2015-04-01",
+      "target": "2015-08-30",
+      "complete": "2015-08-30",
+      "department": "DLAD"
+    },
+    {
+      "name": "GIS Workflow Infrastructure",
+      "url": "http://waffle.io/MITLibraries/kepler",
+      "repo": "https://github.com/MITLibraries/kepler",
+      "size": 8,
+      "sponsor": "Data and Specialized Services",
+      "categories": [
+        "GIS",
+        "Services"
+      ],
+      "contributors": [
+        {
+          "name": "Mike Graves",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mgraves"
+        },
+        {
+          "name": "Daniel Sheehan",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/dsheehan"
+        }
+      ],
+      "inception": "2015-03-01",
+      "start": "2015-04-01",
+      "target": "2015-12-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "OA Statistics Infrastructure",
+      "url": "https://github.com/MITLibraries/oastats-backend",
+      "repo": "https://github.com/MITLibraries/oastats-backend",
+      "size": 6,
+      "sponsor": "Scholarly Publishing",
+      "categories": [
+        "Open Access"
+      ],
+      "contributors": [
+        {
+          "name": "Matt Berhnhardt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Mike Graves",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mgraves"
+        },
+        {
+          "name": "Ellen Duranceau",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/efinnie"
+        }
+      ],
+      "inception": "2015-08-15",
+      "start": "2015-08-20",
+      "target": "2015-11-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "DSpace Identity Lookup",
+      "url": "https://github.mit.edu/mitlibraries/author-lookup",
+      "repo": "https://github.mit.edu/mitlibraries/author-lookup",
+      "size": 3,
+      "sponsor": "Scholarly Publishing",
+      "categories": [
+        "Open Access",
+        "Repository Services"
+      ],
+      "contributors": [
+        {
+          "name": "Matt Berhnhardt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Solh Zendeh",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/szendeh"
+        },
+        {
+          "name": "Sean Thomas",
+          "role": "pm",
+          "url": "http://m.mit.edu/apis/people/sthomas"
+        },
+        {
+          "name": "Ellen Duranceau",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/efinnie"
+        }
+      ],
+      "inception": "2015-05-01",
+      "start": "2015-05-20",
+      "target": "2015-11-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "DSpace ORCID Integration",
+      "url": "https://basecamp.com/2612667/projects/5842953",
+      "repo": "https://basecamp.com/2612667/projects/5842953",
+      "size": 3,
+      "sponsor": "Repository Services",
+      "categories": [
+        "DSpace",
+        "Scholarly Communication"
+      ],
+      "contributors": [
+        {
+          "name": "Richard",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        },
+        {
+          "name": "Beverly",
+          "role": "pm",
+          "url": "http://m.mit.edu/apis/people/bturner"
+        },
+        {
+          "name": "Sean",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/sthomas"
+        }
+      ],
+      "inception": "2015-02-26",
+      "start": "2015-10-01",
+      "target": "2016-03-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "Handbag",
+      "url": "https://github.com/MITLibraries/handbag",
+      "repo": "https://github.com/MITLibraries/handbag",
+      "size": 2,
+      "sponsor": "Curation and Preservation Services",
+      "categories": [
+        "Digital Preservation"
+      ],
+      "contributors": [
+        {
+          "name": "Richard",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        },
+        {
+          "name": "Helen",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Nancy McGovern",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/nancymcg"
+        }
+      ],
+      "inception": "2015-01-21",
+      "start": "2015-03-19",
+      "target": "2015-10-01",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "Wordpress Deploy Infrastructure",
+      "url": "https://github.mit.edu/mitlibraries/wordpress_deployment",
+      "repo": "https://github.mit.edu/mitlibraries/wordpress_deployment",
+      "size": 4,
+      "sponsor": "TPIE",
+      "categories": [
+        "Communication",
+        "Content Management",
+        "Virtual Services"
+      ],
+      "contributors": [
+        {
+          "name": "Matt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Phillip",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/pbruk"
+        }
+      ],
+      "inception": "2014-11-05",
+      "start": "2014-11-25",
+      "target": "2015-10-31",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "Wordpress Platform Development",
+      "url": "https://basecamp.com/2612667/projects/9123052",
+      "repo": "https://github.com/mitlibraries-ux/MITlibraries-parent",
+      "size": 5,
+      "sponsor": "TPIE",
+      "categories": [
+        "Communication",
+        "Content Management",
+        "Virtual Services"
+      ],
+      "contributors": [
+        {
+          "name": "Matt Berhnhardt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Phillip Bruk",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/pbruk"
+        },
+        {
+          "name": "Darcy Duke",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        }
+      ],
+      "inception": "2014-01-01",
+      "start": "2014-01-01",
+      "target": "2015-12-31",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "ITDD Project Porfolio Startup",
+      "url": "http://dlad-portfolio.herokuapp.com/",
+      "repo": "https://github.com/MITLibraries/portfolio",
+      "size": 5,
+      "sponsor": "DLAD",
+      "categories": [
+        "Visualization",
+        "IT Governance"
+      ],
+      "contributors": [
+        {
+          "name": "Helen Bailey",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        },
+        {
+          "name": "Christine Quirion",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/cquirion"
+        }
+      ],
+      "inception": "2015-09-01",
+      "start": "2015-09-08",
+      "target": "2015-09-30",
+      "complete": null,
+      "department": "DLAD"
+    },
+    {
+      "name": "Content Strategy for Libguides",
+      "url": "https://wikis.mit.edu/confluence/display/UXWS/Project+briefs",
+      "repo": null,
+      "size": 3,
+      "sponsor": "TPIE",
+      "categories": [
+        "Content Management",
+        "Virtual Services",
+        "Services"
+      ],
+      "contributors": [
+        {
+          "name": "Stephanie Hartman",
+          "role": "UXWS-lead",
+          "url": "http://m.mit.edu/apis/people/hartman"
+        },
+        {
+          "name": "Georgiana McReynolds",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/gmac"
+        }
+      ],
+      "inception": "2015-03-01",
+      "start": "2015-06-01",
+      "target": "2015-11-30",
+      "complete": null,
+      "department": "TPIE"
+    },
+    {
+      "name": "AKDC new site",
+      "url": "https://wikis.mit.edu/confluence/display/UXWS/Project+briefs",
+      "repo": null,
+      "size": 3,
+      "sponsor": "Data and Specialized Services",
+      "categories": [
+        "Content Management",
+        "Virtual Services"
+      ],
+      "contributors": [
+        {
+          "name": "Stephanie Hartman",
+          "role": "UXWS-lead",
+          "url": "http://m.mit.edu/apis/people/hartman"
+        },
+        {
+          "name": "Darcy Duke",
+          "role": "UXWS",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        },
+        {
+          "name": "Sharon C. Smith",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/scsmith"
+        },
+        {
+          "name": "Michael Toler",
+          "role": "content expert",
+          "url": "http://m.mit.edu/apis/people/scsmith"
+        }
+      ],
+      "inception": "2015-03-01",
+      "start": "2015-08-01",
+      "target": "2015-11-30",
+      "complete": null,
+      "department": "TPIE"
+    },
+    {
+      "name": "Archives Web Site Redesign",
+      "url": "https://wikis.mit.edu/confluence/display/UXWS/Project+briefs",
+      "repo": null,
+      "size": 7,
+      "sponsor": "Archives",
+      "categories": [
+        "Collections",
+        "Content Management"
+      ],
+      "contributors": [
+        {
+          "name": "Darcy Duke",
+          "role": "UXWS",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        },
+        {
+          "name": "Stephanie Hartman",
+          "role": "UXWS",
+          "url": "http://m.mit.edu/apis/people/hartman"
+        },
+        {
+          "name": "Tom Rosko",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/rosko"
+        }
+      ],
+      "inception": "2015-05-01",
+      "start": "2015-06-30",
+      "target": "2016-05-30",
+      "complete": null,
+      "department": "TPIE"
+    },
+    {
+      "name": "Scholarly Publication Site Refresh",
+      "url": "https://wikis.mit.edu/confluence/display/UXWS/Project+briefs",
+      "repo": null,
+      "size": 6,
+      "sponsor": "Scholarly Publishing",
+      "categories": [
+        "UXWS"
+      ],
+      "contributors": [
+        {
+          "name": "Darcy Duke",
+          "role": "UXWS",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        },
+        {
+          "name": "Ellen Duranceau",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/efinnie"
+        },
+        {
+          "name": "Katherine Dunn",
+          "role": "content expert",
+          "url": "http://m.mit.edu/apis/people/khdunn"
+        },
+        {
+          "name": "Matt Bernhardt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        }
+      ],
+      "inception": "2015-06-01",
+      "start": "2015-07-15",
+      "target": "2016-03-31",
+      "complete": null,
+      "department": "TPIE"
+    },
+    {
+      "name": "OA Workflow Infrastructure & Symplectic Elements",
+      "url": null,
+      "repo": null,
+      "size": 10,
+      "sponsor": "Scholarly Publishing",
+      "categories": [
+        "Scholarly Publishing",
+        "Repository Services",
+        "OA Mandate"
+      ],
+      "contributors": [
+        {
+          "name": "Richard Rodgers",
+          "role": "technical coord.",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        },
+        {
+          "name": "Sean Thomas",
+          "role": "repository",
+          "url": "http://m.mit.edu/apis/people/sthomas"
+        },
+        {
+          "name": "TPIE PM/BA",
+          "role": "pm.",
+          "url": null
+        },
+        {
+          "name": "Ellen Duranceau",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/efinnie"
+        },
+        {
+          "name": "Alex Brennan",
+          "role": "IT infrastructure",
+          "url": "http://m.mit.edu/apis/people/vab"
+        },
+        {
+          "name": "ITDD Data Owner TBA",
+          "role": "data owner",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        }
+      ],
+      "inception": "2015-06-01",
+      "start": "2015-10-01",
+      "target": "2016-03-31",
+      "complete": null,
+      "department": [
+        "DLAD",
+        "ITDS",
+        "TPIE"
+      ]
+    },
+    {
+      "name": "Enable OA Embargo in DSpace for DOE, Springer, etc.",
+      "url": null,
+      "repo": null,
+      "size": 5,
+      "sponsor": "Scholarly Publishing",
+      "categories": [
+        "Scholarly Publishing",
+        "Repository Services",
+        "DSpace"
+      ],
+      "contributors": [
+        {
+          "name": "Richard Rodgers",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/rrodgers"
+        },
+        {
+          "name": "Sean Thomas",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/sthomas"
+        },
+        {
+          "name": "TPIE PM/BA - TBD",
+          "role": "pm.",
+          "url": null
+        },
+        {
+          "name": "Ellen Duranceau",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/efinnie"
+        },
+        {
+          "name": "Carl Jones",
+          "role": "repository",
+          "url": "http://m.mit.edu/apis/people/carlj"
+        },
+        {
+          "name": "ITDD Data Owner TBA",
+          "role": "data owner",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        }
+      ],
+      "inception": "2015-09-27",
+      "start": "2015-11-30",
+      "target": "2016-03-31",
+      "complete": null,
+      "department": [
+        "DLAD",
+        "ITDS"
+      ]
+    },
+    {
+      "name": "Server Upgrades, Hardware and Storage to IST",
+      "url": null,
+      "repo": null,
+      "size": 6,
+      "sponsor": "ITDS",
+      "categories": [
+        "IT Infrastructure",
+        "Critical Storage"
+      ],
+      "contributors": [
+        {
+          "name": "Alex Brennan",
+          "role": "IT infrastructure.",
+          "url": "http://m.mit.edu/apis/people/vab"
+        },
+        {
+          "name": "Tim Rix",
+          "role": "IT Infrastructure",
+          "url": "http://m.mit.edu/apis/people/ter"
+        },
+        {
+          "name": "Olimpia Carceres-Brown",
+          "role": "IT Infrastructure",
+          "url": "http://m.mit.edu/apis/people/olimpia"
+        },
+        {
+          "name": "TPIE PM/BA",
+          "role": "pm.",
+          "url": null
+        }
+      ],
+      "inception": "2015-06-01",
+      "start": "2015-10-01",
+      "target": "2016-03-31",
+      "complete": null,
+      "department": "ITDS"
+    },
+    {
+      "name": "Discovery - Survey and Analytics",
+      "url": null,
+      "repo": null,
+      "size": 5,
+      "sponsor": "TPIE",
+      "categories": [
+        "ILS",
+        "Discovery",
+        "Virtual Services"
+      ],
+      "contributors": [
+        {
+          "name": "Darcy Duke",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        },
+        {
+          "name": "Christine Moulen",
+          "role": "Enterprise Systems",
+          "url": "http://m.mit.edu/apis/people/orbitee"
+        },
+        {
+          "name": "Rich Wenger",
+          "role": "Enterprise Systems",
+          "url": "http://m.mit.edu/apis/people/rwenger"
+        },
+        {
+          "name": "Matt Bernhardt",
+          "role": "dev",
+          "url": "http://m.mit.edu/apis/people/mjbernha"
+        },
+        {
+          "name": "Melissa Feiden",
+          "role": "pm",
+          "url": "http://m.mit.edu/apis/people/feiden"
+        }
+      ],
+      "inception": "2015-09-01",
+      "start": "2015-10-30",
+      "target": "2016-12-31",
+      "complete": null,
+      "department": "ITDS"
+    },
+    {
+      "name": "BLC Exit - ITDD Roles",
+      "url": null,
+      "repo": null,
+      "size": 5,
+      "sponsor": "Academic and Community Engagement",
+      "categories": [
+        "Discovery",
+        "Virtual Services",
+        "Services"
+      ],
+      "contributors": [
+        {
+          "name": "Darcy Duke",
+          "role": "UXWS",
+          "url": "http://m.mit.edu/apis/people/darcy"
+        },
+        {
+          "name": "Christine Moulen",
+          "role": "Enterprise Systems",
+          "url": "http://m.mit.edu/apis/people/orbitee"
+        },
+        {
+          "name": "Rich Wenger",
+          "role": "Enterprise Systems",
+          "url": "http://m.mit.edu/apis/people/rwenger"
+        },
+        {
+          "name": "Tracy Gabridge",
+          "role": "owner",
+          "url": "http://m.mit.edu/apis/people/tag"
+        }
+      ],
+      "inception": "2015-09-01",
+      "start": "2015-10-30",
+      "target": "2016-05-30",
+      "complete": null,
+      "department": [
+        "ITDS",
+        "TPIE"
+      ]
+    }
+  ]
 }
-

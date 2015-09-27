@@ -158,17 +158,18 @@ d3.json("static/data_tree.json", function(data) {
 						return d.name + " (" + d.role + ")";
 					});
 
-				info_text.append("p")
-					.attr("class", "text-danger bg-danger")
-					.text(function() {
-
-						if (get_date(d.target) < today_date) {
-							s = "This project is past its target end date of "
-							date = moment(get_date(d.target)).format('MMMM Do, YYYY');
-							return s + date;
-						}
-					})
-				}
+                info_text.append("p")
+                    .attr("class", "text-danger bg-danger")
+                    .text(function() {
+                        if (d.complete == null) {
+                            if (get_date(d.target) < today_date) {
+                                s = "This project is past its target end date of "
+                                date = moment(get_date(d.target)).format('MMMM Do, YYYY');
+                                return s + date;
+                            }
+                        }
+                    });
+			}
 		})
 		.on("mouseout", function() {
 			d3.select(this)
