@@ -111,11 +111,11 @@ d3.json("static/data_tree.json", function(data) {
 		.append("svg:rect")
 		.attr("width", function(d) { return d.dx - 4; })
 		.attr("height", function(d) { return d.dy - 4; })
-		.style("fill", function(d) { 
+		.style("fill", function(d) {
 			if (d.children) {
 				return "white";
 			} else {
-				return colors[d.sponsor]; 
+				return colors[d.sponsor];
 			}
 		})
 		.style("stroke", "white")
@@ -146,12 +146,12 @@ d3.json("static/data_tree.json", function(data) {
 	            infoList.append("li")
 	                .text(function() {
 	                    return "Target end date: " + moment(get_date(d.target)).format('MMMM Do, YYYY');
-	                });    
+	                });
 
 	            infoList.append("li")
 	                .text(function() {
 	                    return "Sponsor: " + d.sponsor;
-	                });         
+	                });
 
 	            var conList = infoList.append("li")
 	                .text("Contributors:")
@@ -194,7 +194,7 @@ d3.json("static/data_tree.json", function(data) {
         })
         .on("mouseout", function() {
             d3.select(this)
-            .style("stroke-width", 0)
+            .style("stroke", "white")
         });
 
 	cell.append("text")
@@ -243,7 +243,7 @@ d3.json("static/data_tree.json", function(data) {
 		.attr("class", "small")
 		// .attr("text-anchor", "left")
 		.text(function(d) { return d; });
-	
+
 	var info_text = project_info.append("div")
 		.attr("class", "info-text")
 		.append("p")
