@@ -1,4 +1,4 @@
-var sponsors = get_sponsors(data);
+var categories = get_categories(data);
 var today_date = new Date();
 
 var w = $('.viz').width(),
@@ -42,16 +42,13 @@ var legend = d3.select(".info")
 	.attr("class", "legend")
 	.style("width", rw + "px")
 	.style("height", function() {
-		return (20*sponsors.length + 35) + "px";
+		return (20*categories.length + 35) + "px";
 	})
-
-legend.append("h5")
-	.text("Sponsoring Departments:");
 
 legend.append("svg:svg")
 	.attr("width", rw)
 	.attr("height", function() {
-		return 20*sponsors.length;
+		return 20*categories.length;
 	});
 
 var footer = d3.select("#footer")
@@ -69,7 +66,7 @@ function get_date(date) {
 	return new_date;
 }
 
-function get_sponsors(data) {
+function get_categories(data) {
 	d = JSON.parse(data);
 	RESULTS = []
 	for (i in d.children) {
@@ -77,8 +74,8 @@ function get_sponsors(data) {
 			if (RESULTS.indexOf(d.children[i].name) == -1) {
 				RESULTS.push(d.children[i].name);
 			}
-		} else if (RESULTS.indexOf(d.children[i].sponsor) == -1) {
-			RESULTS.push(d.children[i].sponsor);
+		} else if (RESULTS.indexOf(d.children[i].category) == -1) {
+			RESULTS.push(d.children[i].category);
 		}
 	}
 	return RESULTS.sort();
@@ -86,8 +83,8 @@ function get_sponsors(data) {
 
 function set_colors() {
 	RESULTS = {}
-	for (s in sponsors) {
-		RESULTS[sponsors[s]] = color(s);
+	for (s in categories) {
+		RESULTS[categories[s]] = color(s);
 	}
 	return RESULTS;
 }
@@ -115,7 +112,7 @@ d3.json("static/data_tree.json", function(data) {
 			if (d.children) {
 				return "white";
 			} else {
-				return colors[d.sponsor];
+				return colors[d.category];
 			}
 		})
 		.style("stroke", "white")
@@ -150,7 +147,7 @@ d3.json("static/data_tree.json", function(data) {
 
 	            infoList.append("li")
 	                .text(function() {
-	                    return "Sponsor: " + d.sponsor;
+	                    return "Category: " + d.category;
 	                });
 
 	            var conList = infoList.append("li")
@@ -177,19 +174,6 @@ d3.json("static/data_tree.json", function(data) {
 	                            }
 	                        }
 	                    });
-
-	            var catList = infoList.append("li")
-	                .text("Categories:")
-	                .append("ul")
-	                .attr("class", "categories");
-
-	            catList.selectAll("li")
-	                .data(d.categories)
-	                .enter()
-	                .append("li")
-	                .text(function(d) {
-	                    return d;
-	                });
 	        }
         })
         .on("mouseout", function() {
@@ -222,7 +206,7 @@ d3.json("static/data_tree.json", function(data) {
 
 	var legend_item = legend.select("svg")
 		.selectAll("g")
-		.data(sponsors)
+		.data(categories)
 		.enter()
 		.append("svg:g")
 		.attr("class", "legend_item")

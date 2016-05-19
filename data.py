@@ -14,7 +14,7 @@ def process_treemap(data_file):
 		data['projects'] = projects
 
 		for item in data['projects']:
-			s = item['sponsor']
+			s = item['category']
 			if s in sponsors:
 				if s not in multi_sponsors:
 					multi_sponsors.append(s)
@@ -29,10 +29,10 @@ def process_treemap(data_file):
 
 		for s in multi_sponsors:
 			for i in range(len(data['projects']) - 1, -1, -1):
-				if data['projects'][i]['sponsor'] == s:
+				if data['projects'][i]['category'] == s:
 					k = find(new_data['children'], 'name', s)
 					new_data['children'][k]['children'].append(data['projects'].pop(i))
-					
+
 		for i in range(len(data['projects']) - 1, -1, -1):
 			try:
 				new_data['children'].append(data['projects'].pop(i))
@@ -68,7 +68,7 @@ def write_to_json(output_file, data):
 		json.dump(data, write_file, indent=4)
 
 if __name__ == '__main__':
-	tree_data = process_treemap('static/dlad_portfolio.json')
+	tree_data = process_treemap('static/dms_portfolio.json')
 	write_to_json('static/data_tree.json', tree_data)
-	time_data = process_timeline('static/dlad_portfolio.json')
+	time_data = process_timeline('static/dms_portfolio.json')
 	write_to_json('static/data_time.json', time_data)

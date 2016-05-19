@@ -1,4 +1,4 @@
-var sponsors = get_sponsors(data);
+var categories = get_categories(data);
 var mover;
 
 var dates = JSON.parse(dates);
@@ -56,16 +56,13 @@ var legend = d3.select(".info")
     .attr("class", "legend")
     .style("width", rw + "px")
     .style("height", function() {
-        return (20*sponsors.length + 35) + "px";
+        return (20*categories.length + 35) + "px";
     })
-
-legend.append("h5")
-    .text("Sponsoring Departments:");
 
 legend.append("svg:svg")
     .attr("width", rw)
     .attr("height", function() {
-        return 20*sponsors.length;
+        return 20*categories.length;
     });
 
 var footer = d3.select("#footer")
@@ -75,12 +72,12 @@ var footer = d3.select("#footer")
         return "Project data last updated on " + moment(d.updated).format('MMMM Do, YYYY');
     });
 
-function get_sponsors(data) {
+function get_categories(data) {
     d = JSON.parse(data);
     RESULTS = []
     for (i in d.projects) {
-        if (RESULTS.indexOf(d.projects[i].sponsor) == -1) {
-            RESULTS.push(d.projects[i].sponsor);
+        if (RESULTS.indexOf(d.projects[i].category) == -1) {
+            RESULTS.push(d.projects[i].category);
         }
     }
     return RESULTS.sort();
@@ -88,8 +85,8 @@ function get_sponsors(data) {
 
 function set_colors() {
     RESULTS = {}
-    for (s in sponsors) {
-        RESULTS[sponsors[s]] = color(s);
+    for (s in categories) {
+        RESULTS[categories[s]] = color(s);
     }
     return RESULTS;
 }
@@ -125,12 +122,13 @@ d3.json("static/data_time.json", function(error, data) {
             return (eDate - sDate);
         })
         .attr("height", height/dates.length * 1.5)
-        .style("fill", function(d) { 
-            return colors[d.sponsor];
+        .style("fill", function(d) {
+            return colors[d.category];
         })
+        .style("stroke", "white")
+        .style("stroke-width", 2)
         .on("mouseover", function(d) {
             d3.select(this)
-                .style("stroke-width", 2)
                 .style("stroke", "black");
 
             d3.selectAll(".info-text").remove();
@@ -154,12 +152,12 @@ d3.json("static/data_time.json", function(error, data) {
             infoList.append("li")
                 .text(function() {
                     return "Target end date: " + moment(get_date(d.target)).format('MMMM Do, YYYY');
-                });    
+                });
 
             infoList.append("li")
                 .text(function() {
-                    return "Sponsor: " + d.sponsor;
-                });         
+                    return "Category: " + d.category;
+                });
 
             var conList = infoList.append("li")
                 .text("Contributors:")
@@ -185,23 +183,10 @@ d3.json("static/data_time.json", function(error, data) {
                             }
                         }
                     });
-
-            var catList = infoList.append("li")
-                .text("Categories:")
-                .append("ul")
-                .attr("class", "categories");
-
-            catList.selectAll("li")
-                .data(d.categories)
-                .enter()
-                .append("li")
-                .text(function(d) {
-                    return d;
-                });
         })
         .on("mouseout", function() {
             d3.select(this)
-            .style("stroke-width", 0)
+            .style("stroke", "white")
         });
 
     rectangle.append("text")
@@ -232,8 +217,8 @@ d3.json("static/data_time.json", function(error, data) {
         })
         .attr("font-size", "1em")
         .style("fill", "black")
-        .text(function(d) { 
-            return d.name; 
+        .text(function(d) {
+            return d.name;
         });
 
     var ruler = mover.append("line")
@@ -261,7 +246,7 @@ d3.json("static/data_time.json", function(error, data) {
 
     var legend_item = legend.select("svg")
         .selectAll("g")
-        .data(sponsors)
+        .data(categories)
         .enter()
         .append("svg:g")
         .attr("class", "legend_item")
@@ -311,7 +296,7 @@ function dragmove(d) {
                 return "red";
             }
             else {
-                return colors[d.sponsor];
+                return colors[d.category];
             }
         })
 }

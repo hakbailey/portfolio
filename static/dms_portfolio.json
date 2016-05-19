@@ -1,0 +1,136 @@
+{
+  "name": "Data Management Services",
+  "updated": "2016-05-19",
+  "projects": [
+    {
+      "name": "Fellows Documentation Project Phase 2",
+      "url": "",
+      "size": 2,
+      "category": "Internal DMS Development",
+      "contributors": [
+        {
+          "name": "Christine Malinowski",
+          "role": "DMS contributor",
+          "url": "http://m.mit.edu/apis/people/cmalin"
+        },
+        {
+          "name": "Jessica Venlet",
+          "role": "Archives contributor",
+          "url": "http://m.mit.edu/apis/people/jvenlet"
+        }
+      ],
+      "inception": "2015-07-01",
+      "start": "2016-07-01",
+      "target": "2016-10-31",
+      "complete": null
+    },
+    {
+      "name": "Targeted Outreach to Researchers",
+      "size": 2,
+      "category": "MIT Relationship Building",
+      "contributors": [],
+      "inception": "2015-07-01",
+      "start": "2019-02-01",
+      "target": "2019-05-31",
+      "complete": null
+    },
+    {
+      "name": "Student Data in DSpace",
+      "url": "https://wikis.mit.edu/confluence/display/DSSLIB/Project+8a%3A+student+data+in+DSpace",
+      "size": 3,
+      "category": "Tools and Technology",
+      "contributors": [
+        {
+          "name": "Mark Clemente",
+          "role": "DMS contributor",
+          "url": "http://m.mit.edu/apis/people/clemente"
+        },
+        {
+          "name": "Sean Thomas",
+          "role": "ITDD contributor",
+          "url": "http://m.mit.edu/apis/people/sthomas"
+        },
+        {
+          "name": "Mikki Macdonald",
+          "role": "Archives contributor",
+          "url": "http://m.mit.edu/apis/people/mssimon"
+        },
+        {
+          "name": "Phoebe Ayers",
+          "role": "Project manager",
+          "url": "http://m.mit.edu/apis/people/psayers"
+        }
+      ],
+      "inception": "2015-07-01",
+      "start": "2015-12-01",
+      "target": "2016-09-30",
+      "complete": null
+    },
+    {
+      "name": "Campus RDM Network",
+      "size": 4,
+      "category": "MIT Relationship Building",
+      "contributors": [],
+      "inception": "2015-07-01",
+      "start": "2016-07-01",
+      "target": "2017-06-30",
+      "complete": null
+    },
+    {
+      "name": "Active Phase Tools",
+      "size": 4,
+      "category": "Tools and Technology",
+      "contributors": [],
+      "inception": "2015-07-01",
+      "start": "2017-01-01",
+      "target": "2017-09-30",
+      "complete": null
+    },
+    {
+      "name": "Circle Back to DMP Authors",
+      "size": 1,
+      "category": "MIT Relationship Building",
+      "contributors": [],
+      "inception": "2015-07-01",
+      "start": "2016-09-01",
+      "target": "2016-10-31",
+      "complete": null
+    },
+    {
+      "name": "Improve DMS Member Skills",
+      "size": 2,
+      "category": "Internal DMS Development",
+      "contributors": [],
+      "inception": "2015-07-01",
+      "start": "2019-01-01",
+      "target": "2019-06-30",
+      "complete": null
+    },
+    {
+      "name": "New Program Head",
+      "size": 2,
+      "category": "Internal DMS Development",
+      "contributors": [],
+      "inception": "2016-05-19",
+      "start": "2016-07-01",
+      "target": "2017-03-31",
+      "complete": null
+    },
+    {
+      "name": "Explore Local Repository Improvements",
+      "size": 4,
+      "category": "Tools and Technology",
+      "contributors": [
+        {
+          "name": "Helen",
+          "role": "DMS contributor",
+          "url": "http://m.mit.edu/apis/people/hbailey"
+        }
+      ],
+      "inception": "2015-07-01",
+      "start": "2016-07-01",
+      "target": "2017-03-31",
+      "complete": null
+    }
+  ]
+}
